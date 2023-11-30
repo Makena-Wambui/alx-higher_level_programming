@@ -37,3 +37,9 @@ Your program should call each of the imported functions. See example below for f
 the word calculator_1 should be used only once in your file
 You are not allowed to use * for importing or __import__
 Your code should not be executed when imported
+
+6.
+Write a program that imports the variable a from the file variable_load_5.py and prints its value.
+
+You are not allowed to use * for importing or __import__
+Your code should not be executed when imported
