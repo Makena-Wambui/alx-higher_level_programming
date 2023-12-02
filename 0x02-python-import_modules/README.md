@@ -73,6 +73,12 @@ The output should be the result of the addition of all arguments, followed by a 
 You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers)
 Your code should not be executed when imported
 
+6.
+Write a program that prints #pythoniscool, followed by a new line, in the standard output.
+
+Your program should be maximum 2 lines long
+You are not allowed to use print or eval or open or import sys in your file 101-easy_print.py
+
 
 
 
