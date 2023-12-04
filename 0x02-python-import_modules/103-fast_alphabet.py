@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import string # import string module
+import stringi  # import string module
 print(string.ascii_uppercase)
 # print the uppercase attribute of the string module
 # this attribute contains the alphabet in uppercase
