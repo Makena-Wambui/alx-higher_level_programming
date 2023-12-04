@@ -1,3 +1,2 @@
 #!/usr/bin/python
-import string
-print(string.ascii_uppercase)
+print(*map(chr, range(ord('A'), ord('Z') +1)), sep ='', end='\n')
