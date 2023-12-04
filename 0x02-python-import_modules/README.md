@@ -83,7 +83,14 @@ You are not allowed to use print or eval or open or import sys in your file 101-
 
 
 
-
+7. 7. 7. 7. 7. 7. 7. Write a program that prints ihe alphabet in uppercase, followed by a new line
+Your program should be maximum 3 lines long
+You are not allowed to use:
+any loops
+any conditional statements
+str.join()
+any string literal
+any system calls
 
 
 
