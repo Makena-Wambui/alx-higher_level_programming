@@ -1,3 +1,3 @@
 #!/usr/bin/python
-import stringi  # import string module
+import string
 print(string.ascii_uppercase)
