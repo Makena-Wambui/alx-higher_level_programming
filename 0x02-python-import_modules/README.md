@@ -80,10 +80,7 @@ Your program should be maximum 2 lines long
 You are not allowed to use print or eval or open or import sys in your file 101-easy_print.py
 
 
-
-
-
-7. 7. 7. 7. 7. 7. 7. Write a program that prints ihe alphabet in uppercase, followed by a new line
+7. Write a program that prints ihe alphabet in uppercase, followed by a new line
 Your program should be maximum 3 lines long
 You are not allowed to use:
 any loops
@@ -91,6 +88,11 @@ any conditional statements
 str.join()
 any string literal
 any system calls
+# print the uppercase attribute of the string module
+# this attribute contains the alphabet in uppercase
+# the string module is a std library module
+# it provides various functions and constants for working with strings
+~                                                                                                                                                     ~                                                                 
 
 
 
