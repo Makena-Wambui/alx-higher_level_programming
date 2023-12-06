@@ -12,7 +12,12 @@ def dictionaries():
     print(Cities)
     # print("{}".format(Cities[2]))
     del Cities['UK']
+    # print("The value of the UK Key is {:s}.".format(Cities['UK']))
     print(Cities)
+    # lets create a dict using integers as keys
+    Alphabet = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
+    print("{}".format(Alphabet))
+    print("The value of 1 is : {:s} and 2 is {:s}".format(Alphabet[1], Alphabet[2]))
 
 
 if __name__ == '__main__':
