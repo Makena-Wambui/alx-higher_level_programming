@@ -68,6 +68,16 @@ def dictionaries():
     print("{}".format(Person.get('Town', -1)))
     print("{}".format(list(Person.items())))
     print("{}".format(list(Person.items())[0][1]))  # Perform indexing
+    print("{}".format(list(Person.keys())))
+    print("{}".format(list(Person.keys())[2]))
+    Animals = dict([('Herbivore', 'Rhino'), ('Carnivore', 'Lion'), ('Omnivore', 'Cat')])
+    s = {1: 'bbb', 2: 'bbb', 3: 'bbb'}
+    print(Animals)
+    print("{}".format(list(Animals.values())))
+    print("{}".format(list(s.values())))
+    print(s)
+    s.pop(1)
+    print("{}".format(list(s.keys())))
 
 
 if __name__ == '__main__':
