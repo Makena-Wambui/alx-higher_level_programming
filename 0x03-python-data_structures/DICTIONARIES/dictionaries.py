@@ -49,9 +49,13 @@ def dictionaries():
     d[int] = 1
     d[float] = 2.5
     d[bool] = 10
+    d[bool] = 16
+    # let us use tuples as keys and lists
+    # f = {(1, 2): 'a', (4, 5): 'c', (8, 9): 'q', [9, 0]: 'p'}
     print(d)
     print("{}".format(d[3.14]))
     print("{:d}".format(d[bool]))
+    # print(f)
 
 
 if __name__ == '__main__':
