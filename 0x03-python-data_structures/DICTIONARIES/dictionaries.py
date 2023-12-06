@@ -16,8 +16,42 @@ def dictionaries():
     print(Cities)
     # lets create a dict using integers as keys
     Alphabet = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
+    Alpha = {4: 'D', 3: 'C', 2: 'B', 1: 'A'}
+    List = ['a', 'b', 'c', 'd']
     print("{}".format(Alphabet))
+    print("{}".format(Alpha))
     print("The value of 1 is : {:s} and 2 is {:s}".format(Alphabet[1], Alphabet[2]))
+    print("The value of 1 is : {:s} and 2 is {:s}".format(Alpha[1], Alpha[2]))
+    print("{:s}".format(List[-1]))
+    # print("{:s}".format(Alpha[-1])) accessing a dictionary like a list
+    print(List[0:3])
+    print(List[:3])
+    print(List[-3:])
+    print(List[:-3])
+    # print(Alpha[:3]) no slicing
+    # Alpha.append('E') traeting a dict like a list
+    print(Alpha)
+    # creating a dictinary on the move
+    Person = {}
+    print("Empty dictionary {}. This is its type: {}".format(Person, type(Person)))
+    Person['fname'] = 'Alice'
+    Person['lname'] = 'Makena'
+    Person['Age'] = '31'
+    Person['Spouse'] = 'Gerald'
+    Person['Kids'] = ['Jake', 'Ann']
+    Person['Pets'] = {'Dog': 'Rex', 'Cat': 'Niko'}
+    print(Person)
+    print("{}".format(Person['Kids'][-1]))  # retrieve the last name in the Kids sublist
+    print("{}".format(Person['Pets']['Dog']))
+    # keys can also be of different types
+    d = {'name': 'Kezy', 3.14: 'pi', True: 1, 1: 'aaa'}
+    # you can use built in objects like types and functions as keys
+    d[int] = 1
+    d[float] = 2.5
+    d[bool] = 10
+    print(d)
+    print("{}".format(d[3.14]))
+    print("{:d}".format(d[bool]))
 
 
 if __name__ == '__main__':
