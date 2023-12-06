@@ -6,6 +6,7 @@ def dictionaries():
     Personal_Info['Address'] = '1046 Kiambu'
     print("VaLue of Address key is {:s}".format(Personal_Info['Address']))
     Personal_Info['Name'] = 'Makena'
+    del Personal_Info['Age']
     print("{}".format(Personal_Info))
 
 
