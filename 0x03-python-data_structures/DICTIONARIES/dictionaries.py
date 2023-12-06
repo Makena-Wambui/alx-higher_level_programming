@@ -51,11 +51,21 @@ def dictionaries():
     d[bool] = 10
     d[bool] = 16
     # let us use tuples as keys and lists
-    # f = {(1, 2): 'a', (4, 5): 'c', (8, 9): 'q', [9, 0]: 'p'}
+    f = {(1, 2): 'a', (4, 5): 'c', (8, 9): 'q', int: 'p', 'letter': 'p'}
     print(d)
     print("{}".format(d[3.14]))
     print("{:d}".format(d[bool]))
-    # print(f)
+    print(f)
+    print("These two keys int and letter are equal: {:s} and {:s}.".format(f[int], f['letter']))
+    # in and not in operators
+    print("{}".format((1, 2) in f))
+    print("{}".format((4, 5) not in f))
+    del d[bool]
+    print("{:d}".format(len(d)))
+    d.clear()  # will empty a dictionary
+    print(d)
+    print("{:s}".format(Person.get('lname')))
+    print("{}".format(Person.get('Town')))
 
 
 if __name__ == '__main__':
