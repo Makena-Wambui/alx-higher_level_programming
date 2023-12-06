@@ -65,7 +65,9 @@ def dictionaries():
     d.clear()  # will empty a dictionary
     print(d)
     print("{:s}".format(Person.get('lname')))
-    print("{}".format(Person.get('Town')))
+    print("{}".format(Person.get('Town', -1)))
+    print("{}".format(list(Person.items())))
+    print("{}".format(list(Person.items())[0][1]))  # Perform indexing
 
 
 if __name__ == '__main__':
