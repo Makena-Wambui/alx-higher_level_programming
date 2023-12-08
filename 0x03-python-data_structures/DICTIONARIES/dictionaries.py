@@ -121,6 +121,11 @@ def dictionaries():
     STUDENT = ['Tyson', 'James', 'Carrie']
     for f, a, s in zip(FOOD, ALLERGY, STUDENT):
         print("My name is {2}. My favorite food is {0}. I am allergic to {1}.".format(f, a, s))
+    print(FAMILY)
+    for i, j in reversed(list(FAMILY.items())):
+        print(i, j)
+    for number in reversed(range(2, 20, 2)):
+        print(number)
 
 
 if __name__ == '__main__':
