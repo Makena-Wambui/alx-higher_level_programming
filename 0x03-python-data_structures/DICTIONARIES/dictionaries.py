@@ -107,6 +107,20 @@ def dictionaries():
     # Let us build using keyword arguments
     FAMILY = dict(JAKE=7, ALICE=25, MOM=52)
     print(FAMILY)
+    # Lets us demonstarate looping
+    print(list(FAMILY.items()))
+    for key, value in FAMILY.items():
+        print(key, value)
+    # Let us loop through sequence and extract index and its corresponding value using enumerate.
+    LIST = ['cats', 'dogs', 'rats']
+    for index, value in enumerate(LIST):
+        print(index, value)
+    # demonstrate zip()
+    FOOD = ['chicken', 'pizza', 'pilau']
+    ALLERGY = ['peanuts', 'milk', 'wheat']
+    STUDENT = ['Tyson', 'James', 'Carrie']
+    for f, a, s in zip(FOOD, ALLERGY, STUDENT):
+        print("My name is {2}. My favorite food is {0}. I am allergic to {1}.".format(f, a, s))
 
 
 if __name__ == '__main__':
