@@ -78,6 +78,35 @@ def dictionaries():
     print(s)
     s.pop(1)
     print("{}".format(list(s.keys())))
+    print("{}".format(s.pop(5, -1)))
+    Animals.popitem()
+    Animals.popitem()
+    Animals.pop('Herbivore')
+    print(Animals)
+    # Animals.popitem() an empty dictionary
+    d1 = {'a': 10, 'b': 20, 'c': 30}
+    d2 = {'a': 1000, 'c': True}
+    d1.update(d2)  # Merging two dictionaries
+    d2.update([('County', 'Meru'), ('c', None)])
+    d1.update(a=4000, c='Jeopardy')
+    print(d1)
+    print(d2)
+    GRADES = {'Jake': 'Grade 1', 'Abby': 'Grade 2', 'Bilha': 'Grade 3'}
+    GRADES['Vikky'] = 'Grade 1'
+    print("This is the GRADES dictionary: {}".format(GRADES))
+    print(GRADES['Abby'])
+    del GRADES['Vikky']
+    print("This is the GRADES dictionary: {}".format(GRADES))
+    print(list(GRADES))
+    print(sorted(GRADES))
+    print('Abby' in GRADES)
+    print('Bilha' not in GRADES)
+    # let us use dict comprehension to build a dictionary
+    CUBES = {num: num**3 for num in range(10)}
+    print(CUBES)
+    # Let us build using keyword arguments
+    FAMILY = dict(JAKE=7, ALICE=25, MOM=52)
+    print(FAMILY)
 
 
 if __name__ == '__main__':
