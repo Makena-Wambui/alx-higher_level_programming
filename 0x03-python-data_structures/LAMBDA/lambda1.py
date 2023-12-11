@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-add = lambda a, b : a + b
-print(add(1, 2))
+add = map(lambda a, b: a + b, [1, 2]
+print(add)
