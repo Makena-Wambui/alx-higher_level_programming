@@ -61,3 +61,11 @@ Write a function that returns a set of all elements present in only one set.
 
 Prototype: def only_diff_elements(set_1, set_2):
 You are not allowed to import any module
+
+
+
+
+Write a function that returns the number of keys in a dictionary.
+
+Prototype: def number_keys(a_dictionary):
+You are not allowed to import any module
