@@ -140,3 +140,18 @@ Create a function def roman_to_int(roman_string): that converts a Roman numeral 
 You can assume the number will be between 1 to 3999.
 def roman_to_int(roman_string) must return an integer
 If the roman_string is not a string or None, return 0
+
+
+
+Write a function that computes the square value of all integers of a matrix using map
+
+Prototype: def square_matrix_map(matrix=[]):
+matrix is a 2 dimensional array
+Returns a new matrix:
+Same size as matrix
+Each value should be the square of the value of the input
+Initial matrix should not be modified
+You are not allowed to import any module
+You have to use map
+You are not allowed to use for or while
+Your file should be max 3 lines
