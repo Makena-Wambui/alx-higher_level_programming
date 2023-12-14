@@ -11,6 +11,7 @@ struct node
 void creation(void);
 size_t display_and_count(void);
 struct node *add_at_beg(struct node *head);
+void deleteatbeginning(struct node *head);
 
 
 
