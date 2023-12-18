@@ -7,5 +7,5 @@ def safe_print_list(my_list=[], x=0):
             number += 1
         except IndexError:  # index in the list that is out of range
             break  # if index error is raised the loop will break
-    print() 
+    print()
     return number
