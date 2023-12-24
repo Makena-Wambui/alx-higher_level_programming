@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module defines a class Square."""
+
+
 class Square:
     """
     This is an empty class that represents a Square.
@@ -11,7 +14,7 @@ class Square:
 
     Methods:
         None
-    More ststatements will be added in the future to cater for functionality
+    More statements will be added in the future to cater for functionality
     related to Squares such as calculating area and perimeter.
 
     """
