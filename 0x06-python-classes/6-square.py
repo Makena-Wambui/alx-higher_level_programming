@@ -10,8 +10,8 @@ class Square:
     position which is assigned the value of the position
     parameter."""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -64,16 +64,10 @@ class Square:
         and 1 blank line before printing the square or above the square."""
         if self.__size == 0:
             print("")
-            return
-
             """Print the blank lines as per position[1] above
             the square."""
-
-        for i in range(self.__position[1]):
-            print()
-        for i in range(self.__size):
-            for a in range(self.__position[0]):
-                print(' ', end='')
-            for a in range(self.__size):
-                print('#', end='')
-            print()
+        else:
+            for i in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                print(' ' * self.__position[0] + '#' * self.__size)
