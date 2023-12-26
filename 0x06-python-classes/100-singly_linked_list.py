@@ -53,6 +53,9 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+    def __str__(self):
+        """Additional str method for printing a Node object."""
+        return str(self.__data)
 
 class SinglyLinkedList:
     """This class defines a singly linked list."""
