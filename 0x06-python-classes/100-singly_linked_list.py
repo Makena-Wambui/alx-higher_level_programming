@@ -57,6 +57,7 @@ class Node:
         """Additional str method for printing a Node object."""
         return str(self.__data)
 
+
 class SinglyLinkedList:
     """This class defines a singly linked list."""
     def __init__(self):
