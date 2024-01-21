@@ -1,0 +1,12 @@
+The Factorials module.
+=======================
+
+Using factorial
+----------------
+
+This is the Factorials text file in reStructuredText format.First import Factorial function from Factorials module.
+>>> from Factorials import Factorial
+
+Now use that function:
+>>> Factorial(6)
+720

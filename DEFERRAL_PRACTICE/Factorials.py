@@ -48,5 +48,6 @@ def Factorial(n):
 
 
 if __name__ == "__main__":
+    print(Factorial.__test__)
     import doctest
-    doctest.testmod(verbose=True)
+    doctest.testmod()
