@@ -1,0 +1,53 @@
+This test file contains doctests for the add_integer function.
+
+First we import the add_integer function.
+
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Then we test it.
+
+	>>> add_integer(2, "key")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
+
+	>>> add_integer("num")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	>>> add_integer(0, 2)
+	2
+
+	>>> add_integer(1)
+	99
+
+	>>> add_integer(5, -3)
+	2
+
+	>>> add_integer(2.2)
+	100
+
+	>>> add_integer(-2, -3)
+	-5
+
+	>>> add_integer()
+	Traceback (most recent call last):
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+
+	>>> add_integer(float('nan'))  # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	...
+	ValueError: ...
+
+	>>> add_integer(float('inf'))  # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	OverflowError: ...
+
+	>>> add_integer(float('-inf'))  # doctest: +ELLIPSIS
+	Traceback (most recent call last):  
+	OverflowError: ...
+
+	>>> add_integer(None)  #doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
