@@ -1,0 +1,66 @@
+This text file contains tests for the 3-say_my_name module.
+
+First we import the function from the module.
+
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+These are the tests for this function:
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+
+	>>> say_my_name("Snow", "White")
+	My name is Snow White
+
+
+	>>> say_my_name("Alicia") # doctest: +NORMALIZE_WHITESPACE
+	My name is Alicia
+
+
+	>>> say_my_name() # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+
+	>>> say_my_name("") # doctest: +NORMALIZE_WHITESPACE
+	My name is
+
+
+	>>> say_my_name(1)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+
+	>>> say_my_name("Alicia", None) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> say_my_name(White)
+	Traceback (most recent call last):
+	NameError: name 'White' is not defined
+
+	>>> say_my_name([1, 2, 3])
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("", "Wambui")
+	My name is  Wambui
+
+	>>> say_my_name(1, 10)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("", "") # doctest: +NORMALIZE_WHITESPACE
+	My name is
+	
+
+	>>> say_my_name("Alicia", "Makena", "Wambui")  # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	
+	>>> say_my_name(None, None) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+	
+	

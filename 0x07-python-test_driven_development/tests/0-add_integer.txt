@@ -51,3 +51,8 @@ Then we test it.
 	>>> add_integer(None)  #doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
 	TypeError
+
+	>>> add_integer(1, 2, 3)  # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+	

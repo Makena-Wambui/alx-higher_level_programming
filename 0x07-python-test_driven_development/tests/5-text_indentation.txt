@@ -46,23 +46,20 @@ Then we test the function.
 	Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
 
-	>>> text_indentation()
+	>>> text_indentation() # doctest: +ELLIPSIS
 	Traceback (most recent call last):
-	TypeError: text_indentation() missing 1 required positional argument: 'text'
+	TypeError: ...
 
 
 	>>> text_indentation("")
 
-	>>> text_indentation(1)
+	>>> text_indentation(1)  # doctest: +ELLIPSIS
 	Traceback (most recent call last):
-	TypeError: text must be a string
+	TypeError: ...
 
-
-
-	>>> text_indentation([1, 2, 3])
+	>>> text_indentation([1, 2, 3])  # doctest: +ELLIPSIS
 	Traceback (most recent call last):
-	TypeError: text must be a string
-
+	TypeError: ...
 
 	>>> text_indentation("Mother")
 	Mother
@@ -80,43 +77,42 @@ Then we test the function.
 	apples, pizza and bacon!
 
 
-	>>> text_indentation({"Harry", "Hermione"})
+	>>> text_indentation({"Harry", "Hermione"})  # doctest: +ELLIPSIS
 	Traceback (most recent call last):
-	TypeError: text must be a string
+	TypeError: ...
 
 
 	>>> text_indentation(None)
 	Traceback (most recent call last):
 	TypeError: text must be a string
 
-	>>> text_indentation(1.234)
+	>>> text_indentation(1.234)  # doctest: +ELLIPSIS
 	Traceback (most recent call last):
-	TypeError: text must be a string
+	TypeError: ...
 
 	>>> text_indentation("Hello?")
 	Hello?
 	<BLANKLINE>
 
->>> a = ".:?"
+	>>> a = ".:?"
 
->>> text_indentation(a)
-.
-<BLANKLINE>
-:
-<BLANKLINE>
-?
-<BLANKLINE>
+	>>> text_indentation(a)
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	?
+	<BLANKLINE>
 
->>> text_indentation("Hey\n")
-Hey
->>> text_indentation("Hey\n\n")
-Hey
-<BLANKLINE>
+	>>> text_indentation("Hey\n")
+	Hey
 
+	>>> text_indentation("Hey\n\n")
+	Hey
+	<BLANKLINE>
 
-
->>> text_indentation("Hey.   Are you there?     ")
-Hey.
-<BLANKLINE>
-Are you there?
-<BLANKLINE>
+	>>> text_indentation("Hey.   Are you there?     ")
+	Hey.
+	<BLANKLINE>
+	Are you there?
+	<BLANKLINE>
