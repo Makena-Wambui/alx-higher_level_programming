@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """This is the 4-rectangle module.
 It supplies one class, Rectangle.
 """
