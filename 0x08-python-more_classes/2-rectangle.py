@@ -18,6 +18,9 @@ class Rectangle:
         width
         height
         height
+    Methods:
+        area
+        perimeter
     """
     def __init__(self, width=0, height=0):
         """The init method is a constructor method.
