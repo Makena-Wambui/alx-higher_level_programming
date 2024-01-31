@@ -134,7 +134,7 @@ class Rectangle:
             for j in range(self.__width):
                 result += str(self.print_symbol)
             result += '\n'
-        return result
+        return result[:-1]
 
     def __repr__(self):
         """
