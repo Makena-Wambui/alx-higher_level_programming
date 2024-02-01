@@ -44,8 +44,8 @@ class Rectangle:
             Width
             Height
         """
-        self.height = height
         self.width = width
+        self.height = height
 
         type(self).number_of_instances += 1
 
