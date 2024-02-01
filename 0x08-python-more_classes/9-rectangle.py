@@ -194,4 +194,4 @@ class Rectangle:
         with width == height == size.
         It returns a square.
         """
-        return cls(width==size, height==size)
+        return cls(size, size)
