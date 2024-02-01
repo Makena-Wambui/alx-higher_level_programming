@@ -157,6 +157,9 @@ class Rectangle:
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """This is a static method.
+        Name: bigger_or_equal
+
+        Args: rect_1, rect_2
         It does not need self or cls as the first parameter.
         It returns the biggest rectangle based on the area.
         """
