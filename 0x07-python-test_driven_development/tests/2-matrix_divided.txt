@@ -95,7 +95,11 @@ Now test the function
 	Traceback (most recent call last):
 	TypeError
 
-	matrix = [[2, 4], [6, 8]]
+	>>> matrix = [[2, 4], [6, 8]]
 	>>> matrix_divided(matrix, 2, 4) # doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	TypeError: ...
+
+	>>> matrix_divided("Holberton", 2)  # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
