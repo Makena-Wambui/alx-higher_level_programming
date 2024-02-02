@@ -18,7 +18,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIsNone(max_integer(), None)
 
     def test_listContainsStringElement(self):
-        """Method tests for a list that contains ingers and a string."""
+        """Method tests for a list that contains integers and a string."""
         self.assertRaises(TypeError, max_integer, [1, 2, 'School'])
 
     def test_mixIntsAndFloats(self):
@@ -61,3 +61,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_NoneArgument(self):
         """Test for None passed to function."""
         self.assertRaises(TypeError, max_integer, None)
+
+    def test_maxIntegerInMiddle(self):
+        """Test for when the max integer in the list is in the middle."""
+        self.assertEqual(max_integer([2, 10, 5]), 10)
