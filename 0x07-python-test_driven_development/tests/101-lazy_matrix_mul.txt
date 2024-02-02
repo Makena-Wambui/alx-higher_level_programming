@@ -20,9 +20,9 @@ Then we test it:
 	Traceback (most recent call last):
 	TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
 
-	>>> lazy_matrix_mul(["jake", "school"], [[1,2], [3, 4]]) # doctest: +ELLIPSIS
+	>>> lazy_matrix_mul(["jake", "school"], [[1,2], [3, 4]]) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
-	numpy.core._exceptions._UFuncNoLoopError: ...
+	numpy.core._exceptions._UFuncNoLoopError:	
 
 	>>> print(lazy_matrix_mul([], []))
 	0.0
@@ -31,9 +31,9 @@ Then we test it:
 	Traceback (most recent call last):
 	ValueError:
 
-	>>> lazy_matrix_mul(["mom", "dad"], [[1, 2], [2, 3]]) # doctest: +ELLIPSIS
+	>>> lazy_matrix_mul(["mom", "dad"], [[1, 2], [2, 3]]) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
-	numpy.core._exceptions._UFuncNoLoopError: ...
+	numpy.core._exceptions._UFuncNoLoopError:	
 
 	>>> lazy_matrix_mul(None) # doctest: +ELLIPSIS
 	Traceback (most recent call last):
