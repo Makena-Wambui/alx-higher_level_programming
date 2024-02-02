@@ -26,6 +26,10 @@ Now test the function
 	Traceback (most recent call last):
 	TypeError
 
+	>>> matrix_divided([[1, 2], [2, 3]]) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
 
 	>>> matrix_divided() # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
