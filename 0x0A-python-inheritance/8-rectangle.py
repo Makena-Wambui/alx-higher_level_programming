@@ -61,7 +61,7 @@ class Rectangle(BaseGeometry):
         It initializes each object variable with the
         attributes, width and height.
         """
-        super().integer_validator("width", width)
+        self.integer_validator("width", width)
         self.__width = width
-        super().integer_validator("height", height)
+        self.integer_validator("height", height)
         self.__height = height
