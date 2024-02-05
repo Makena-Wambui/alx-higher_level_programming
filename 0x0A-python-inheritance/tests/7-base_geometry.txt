@@ -69,11 +69,15 @@ This test file contains tests for the method integer_validator from the 7-base_g
 	Traceback (most recent call last):
         TypeError
 
-	>>> a.integer_validator(bool, False) # doctest: +IGNORE_EXCEPTION_DETAIL
+	>>> a.integer_validator("bool", False) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
         TypeError
 
 	>>> a.integer_validator("my_tuple", (1, 2))  # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
+	>>> a.integer_validator("complex number", 2+5j) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
         TypeError
 
