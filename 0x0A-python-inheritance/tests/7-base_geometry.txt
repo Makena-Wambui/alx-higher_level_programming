@@ -1,0 +1,53 @@
+This test file contains tests for the method integer_validator from the 7-base_geometry module.
+------------------------------------------------------------------------------------------------
+	>>> bg = __import__("7-base_geometry")
+
+	>>> BG = getattr(bg, "BaseGeometry")
+
+	>>> integer_validator = getattr(BG, "integer_validator")
+
+	====test 1====
+	>>> a = BG()
+	
+	>>> a.integer_validator("my_int", 12)
+
+	>>> a.integer_validator("alice", 1.24) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> a.integer_validator("alice", "joy") # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
+
+	>>> a.integer_validator("alice", [1, 2]) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
+
+	>>> a.integer_validator("alice", {1, 2, 3}) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
+
+	>>> a.integer_validator("my_val", 0) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        ValueError: ...
+
+	>>> a.integer_validator("my_val", -1) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        ValueError: ...
+
+	>>> b.integer_validator("my_int", 12) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        NameError: ...
+	
+	>>> a.integer_validator("my_val", -1, 9) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
+	>>> a.integer_validator() # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
+	>>> a.integer_validator("my_val") # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
