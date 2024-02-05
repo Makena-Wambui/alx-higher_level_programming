@@ -6,8 +6,22 @@ This test file contains tests for the method integer_validator from the 7-base_g
 
 	>>> integer_validator = getattr(BG, "integer_validator")
 
-	====test 1====
+	>>> area = getattr(BG, "area")
+
+	
 	>>> a = BG()
+
+	>>> a.area() # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	Exception
+
+	>>> a.area(2) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
+	>>> c.area() # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        NameError
 	
 	>>> a.integer_validator("my_int", 12)
 
@@ -51,3 +65,6 @@ This test file contains tests for the method integer_validator from the 7-base_g
 	Traceback (most recent call last):
         TypeError
 
+	>>> a.integer_validator("my_val", {'a': 1, 'b': 2}) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
