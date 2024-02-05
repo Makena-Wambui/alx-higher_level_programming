@@ -68,3 +68,12 @@ This test file contains tests for the method integer_validator from the 7-base_g
 	>>> a.integer_validator("my_val", {'a': 1, 'b': 2}) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
         TypeError
+
+	>>> a.integer_validator(bool, False) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
+	>>> a.integer_validator("my_tuple", (1, 2))  # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+
