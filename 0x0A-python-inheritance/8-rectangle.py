@@ -1,4 +1,4 @@
-#!/umeisr/bin/python3
+#!/usr/bin/python3
 
 """
 This is the 8-rectangle module.
