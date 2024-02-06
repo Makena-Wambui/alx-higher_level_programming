@@ -81,3 +81,8 @@ This test file contains tests for the method integer_validator from the 7-base_g
 	Traceback (most recent call last):
         TypeError
 
+	>>> a.integer_validator("frozenset", frozenset(["dandy", "daddy"])) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+        TypeError
+	
+
