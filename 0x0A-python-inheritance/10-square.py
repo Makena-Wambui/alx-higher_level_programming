@@ -22,7 +22,7 @@ class Square(Rectangle):
         """Python's constructor method.
         Each Square object is initialized with private attribute, size
         """
-        # self.integer_validator("size", size)
+        self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
 
