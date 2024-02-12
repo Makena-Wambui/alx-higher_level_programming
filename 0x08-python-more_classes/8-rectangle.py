@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the 8-rectangle module.
+"""This is the 9-rectangle module.
 It supplies one class, Rectangle.
 """
 
