@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This is the 5-base_geometry module.
+This is the 6-base_geometry module.
 It supplies one class: BaseGeometry
 """
 
