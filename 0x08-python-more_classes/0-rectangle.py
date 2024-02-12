@@ -2,11 +2,13 @@
 
 """
 This is the 0-rectangle module.
-It contains one empty class, Rectangle.
+It Supplies one class, Rectangle.
 """
 
 
 class Rectangle:
-    """This class, Rectangle, is an empty class.
+    """
+    This is an  empty class Rectangle that
+    defines a rectangle.
     """
     pass
