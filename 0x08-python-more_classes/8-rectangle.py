@@ -15,7 +15,8 @@ class Rectangle:
         area
         perimeter
         __str__
-        __repr
+        __repr__
+        bigger_or_equal(rect_1, rect_2)
 
     Attributes:
         width
