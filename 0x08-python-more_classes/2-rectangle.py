@@ -34,8 +34,8 @@ class Rectangle:
         whose values are initialized to the values of the parameters,
         width and height.
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
