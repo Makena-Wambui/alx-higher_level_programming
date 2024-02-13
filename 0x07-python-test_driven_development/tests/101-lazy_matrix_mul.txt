@@ -1,0 +1,56 @@
+This test file contains tests for the function, lazy_matrix_mul
+----------------------------------------------------------------
+
+First import the function:
+	>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Then we test it:
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    	[[ 7 10]
+     	 [15 22]]
+
+	>>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    	[[13 16]]
+
+	>>> lazy_matrix_mul()
+	Traceback (most recent call last):
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+	>>> lazy_matrix_mul([1, 2])
+	Traceback (most recent call last):
+	TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+	>>> lazy_matrix_mul(["jake", "school"], [[1,2], [3, 4]]) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	numpy.core._exceptions._UFuncNoLoopError:	
+
+	>>> print(lazy_matrix_mul([], []))
+	0.0
+
+	>>> lazy_matrix_mul([[1, 2], [2, 3]], [[1, 2], [2, 3], [3,4]]) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	ValueError:
+
+	>>> lazy_matrix_mul(["mom", "dad"], [[1, 2], [2, 3]]) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	numpy.core._exceptions._UFuncNoLoopError:	
+
+	>>> lazy_matrix_mul(None) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> print(lazy_matrix_mul([[1, 2], [1, 2 ,3]], [[1, 2], [2, 4]])) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	ValueError: ...
+
+	>>> print(lazy_matrix_mul([[]], [[0, 0], [0, 0]])) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	ValueError:
+
+	>>> print(lazy_matrix_mul([[-1, -2], [-4, -2]], [[-2, 0], [-1, 1]]))
+	[[ 4 -2]
+	 [10 -2]]
+
+	>>> print(lazy_matrix_mul([[0.1, 0.5], [0.6, -1.4]], [[1, 1], [0.5, 1.9]])) # doctest: +NORMALIZE_WHITESPACE
+	[[ 0.35  1.05]
+	 [-0.1  -2.06]]
