@@ -170,3 +170,12 @@ l2 stil points to the original [1, 2, 3]
 It remains unaffected.
 while l1 now points to anew list.
 So + operator creates a new list
+
+Mutating methods like append() modify the existing list,
+affecting all aliases.
+Reassignment like l1 = l1 + [4] creates a new list,
+leaving other aliases unchanged.
+
+21. Tuple or not?
+a = (1, 2)
+Is a a tuple? Answer with Yes or No.
