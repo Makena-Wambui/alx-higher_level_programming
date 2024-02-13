@@ -58,8 +58,13 @@ In the following code, do a and b point to the same object? Answer with Yes or N
 
 
 4. Right count =
-mandatory
 In the following code, do a and b point to the same object? Answer with Yes or No.
 
 >>> a = 89
 >>> b = a
+
+5. Right count =+
+In the following code, do a and b point to the same object? Answer with Yes or No.
+
+>>> a = 89
+>>> b = a + 1
