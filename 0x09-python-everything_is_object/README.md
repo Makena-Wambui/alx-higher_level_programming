@@ -126,3 +126,28 @@ What do these 3 lines print?
 >>> l1 = [1, 2, 3]
 >>> l2 = l1
 >>> print(l1 is l2)
+
+14. List append
+What does this script print?
+
+l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
+
+14. List append
+What does this script print?
+
+l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
+
+EXPLANATION
+------------
+When you assign l1 to l2, l1 and l2 ow both have the same value.
+And both names both refer to the same object in memory.
+As in they are aliases for the same list object.
+Any changes made to one alias will reflect in the other.
+When you append to l1, you are modifying the existing list, ie the one pointed to by both l1 and l2.
+
