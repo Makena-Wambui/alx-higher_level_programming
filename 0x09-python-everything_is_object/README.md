@@ -1,0 +1,38 @@
+--------------------Learning Objectives---------------------------
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+General
+Why Python programming is awesome
+What is an object
+What is the difference between a class and an object or instance
+What is the difference between immutable object and mutable object
+What is a reference
+What is an assignment
+What is an alias
+How to know if two variables are identical
+How to know if two variables are linked to the same object
+How to display the variable identifier (which is the memory address in the CPython implementation)
+What is mutable and immutable
+What are the built-in mutable types
+What are the built-in immutable types
+How does Python pass variables to functions
+
+WHAT IS AN OBJECT?
+------------------
+An object is something a variable can refer to.
+Variables dont have an associated type or size,
+since they are names or labels attched to objects in memory.
+Do not think of variables as boxes, rather think of them as labels.
+Variables point to a memory position where concrete objects live
+A variable is a name that refers to or holds a reference to a concrete object.
+Python objects are concrete pieces of information that live in specific memory locations 
+on your computer.
+
+In summary:
+A variable holds a reference to an object
+An object lives in a concrete memory position.
+
+0. Who am I?
+What function would you use to get the type of an object?
+
+Write the name of the function in the file, without ()
