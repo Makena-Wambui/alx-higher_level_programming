@@ -230,3 +230,16 @@ Will the last line of this script print 139926795932424? Answer with Yes or No.
 >>> a += [4]
 >>> id(a)
 Will the last line of this script print 139926795932424? Answer with Yes or No.
+
+
+
+16. Integer incrementation
+
+What does this script print?
+
+def increment(n):
+    n += 1
+
+a = 1
+increment(a)
+print(a)
