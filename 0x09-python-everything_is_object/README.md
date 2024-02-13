@@ -151,3 +151,22 @@ As in they are aliases for the same list object.
 Any changes made to one alias will reflect in the other.
 When you append to l1, you are modifying the existing list, ie the one pointed to by both l1 and l2.
 
+
+15. List add
+What does this script print?
+
+l1 = [1, 2, 3]
+l2 = l1
+l1 = l1 + [4]
+print(l2)
+
+EXPLANATION
+------------
+By doing this: l1 = l1 + [4]
+we are creating a new list by concatenating an existing list, l1
+with [4]
+the newly created list is stored in the variable l1
+l2 stil points to the original [1, 2, 3]
+It remains unaffected.
+while l1 now points to anew list.
+So + operator creates a new list
