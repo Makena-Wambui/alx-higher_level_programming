@@ -1,0 +1,105 @@
+This text file contains tests for the matrix_divided function from the 2-matrix_divided module
+
+First import the function from the module.
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Now test the function
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+	>>> matrix_divided(matrix, "None") # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix_divided(matrix, "School") # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix_divided(matrix, float('nan'))
+	[[nan, nan, nan], [nan, nan, nan]]
+
+	>>> matrix = [["jake", "tendai"], [3, 9]]
+
+	>>> matrix_divided(matrix, 3) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix_divided([[1, 2], [2, 3]]) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+
+	>>> matrix_divided() # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+
+	>>> matrix = [1, 2, 3]
+
+	>>> matrix_divided(matrix, 1) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+
+	>>> matrix_divided(3) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+
+	>>> matrix = [[1, 2, 3], (3, 4, 5)]
+	>>> matrix_divided(matrix, 1) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix = [[3,6,9], [1,2,3]]
+
+	>>> matrix_divided(matrix, 0) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	ZeroDivisionError
+
+	>>> matrix_divided(matrix, 1.2)
+	[[2.5, 5.0, 7.5], [0.83, 1.67, 2.5]]
+
+
+	>>> matrix_divided(matrix, 2.41)
+	[[1.24, 2.49, 3.73], [0.41, 0.83, 1.24]]
+
+
+	>>> matrix_divided(matrix, float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+
+	>>> matrix_divided(matrix, float('-inf'))
+	[[-0.0, -0.0, -0.0], [-0.0, -0.0, -0.0]]
+
+
+	>>> matrix = [[1, 2], [3, 5, 6], [7, 8, 9, 10]]
+
+	>>> matrix_divided(matrix, 2) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix = [[5, 10], [20, 30]]
+
+	>>> matrix_divided(matrix, -5)
+	[[-1.0, -2.0], [-4.0, -6.0]]
+
+	>>> matrix_divided(matrix, 2+3j) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix = [(1, 5), {6, 7}, {1: "id", 2: "name"}]
+	>>> matrix_divided(matrix, 1) # doctest: +IGNORE_EXCEPTION_DETAIL
+	Traceback (most recent call last):
+	TypeError
+
+	>>> matrix = [[2, 4], [6, 8]]
+	>>> matrix_divided(matrix, 2, 4) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> matrix_divided("Holberton", 2)  # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
