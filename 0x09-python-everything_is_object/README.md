@@ -311,3 +311,13 @@ if it exists,
 Then we create a list ['BestSchool'] multiplied by count attribute
 join returns a string.
 Specify separator as ", "
+
+
+
+What does this script print?
+def increment(n):
+    n.append(4)
+
+l = [1, 2, 3]
+increment(l)
+print(l)
