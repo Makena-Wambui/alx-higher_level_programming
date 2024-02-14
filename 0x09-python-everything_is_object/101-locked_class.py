@@ -17,6 +17,7 @@ Also prevents creation of any variables that are not declared in
 __slots__
 """
 
+
 class LockedClass:
     """
     This is the class LockedClass.
