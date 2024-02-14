@@ -292,3 +292,22 @@ QUESTION
 Write a class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name.
 
 You are not allowed to import any module
+
+
+QUESTION
+------------
+Write a function magic_string() that returns a string “BestSchool” n times the number of the iteration (see code):
+
+
+Your file should be maximum 4-line long (no documentation needed)
+You are not allowed to import any module
+
+------EXPLAINED------
+Create an attribute count on the function magic string.
+Then use the getattr function to retrieve the value of magic_string.count
+if it doesnt exist, it defaults to 0.
+if it exists,
+1 is added to increment the count.
+Then we create a list ['BestSchool'] multiplied by count attribute
+join returns a string.
+Specify separator as ", "
