@@ -22,7 +22,7 @@ Then we test it:
 
 	>>> lazy_matrix_mul(["jake", "school"], [[1,2], [3, 4]]) # doctest: +IGNORE_EXCEPTION_DETAIL
 	Traceback (most recent call last):
-	numpy.core._exceptions._UFuncNoLoopError:	
+	TypeError: invalid data type for einsum
 
 	>>> print(lazy_matrix_mul([], []))
 	0.0
