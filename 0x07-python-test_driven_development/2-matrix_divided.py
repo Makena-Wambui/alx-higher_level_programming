@@ -7,10 +7,10 @@ It supplies one function: the matrix_divided function.
 def matrix_divided(matrix, div):
     """This function divides all elements of a matrix with a number, div."""
     if not isinstance(matrix, list) or len(matrix) == 0:
-        raise TypeError("matrix must be a matrix (list of lists)" +
+        raise TypeError("matrix must be a matrix (list of lists) " +
                         "of integers/floats")
     if not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists)" +
+        raise TypeError("matrix must be a matrix (list of lists) " +
                         "of integers/floats")
     # each row must be of the same size:
     length = len(matrix[0])
@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
     for row in matrix:
         for i in row:
             if not isinstance(i, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists)" +
+                raise TypeError("matrix must be a matrix (list of lists) " +
                                 "of integers/floats")
     # div must be an integer or float
     if not isinstance(div, (int, float)):
