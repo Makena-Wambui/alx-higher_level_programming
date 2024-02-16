@@ -13,9 +13,9 @@ Now test the function
 	Traceback (most recent call last):
 	TypeError
 
-	>>> matrix_divided(matrix, "School") # doctest: +IGNORE_EXCEPTION_DETAIL
+	>>> matrix_divided(matrix, "School")
 	Traceback (most recent call last):
-	TypeError
+	TypeError: div must be a number
 
 	>>> matrix_divided(matrix, float('nan'))
 	[[nan, nan, nan], [nan, nan, nan]]
