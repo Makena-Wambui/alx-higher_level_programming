@@ -189,6 +189,6 @@ Let us now test this function
 
 	>>> m_a = [["son", "daughter"], ["mom", "dad"]]
 	>>> m_b = [[1, 2], [2, 3]]
-	>>> matrix_mul(m_a, m_b) # doctest: +ELLIPSIS
+	>>> matrix_mul(m_a, m_b)
 	Traceback (most recent call last):
-	TypeError: ...
+	TypeError: m_a should contain only integers or floats
