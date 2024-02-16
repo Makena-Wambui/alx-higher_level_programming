@@ -108,3 +108,9 @@ Now test the function
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+	>>> matrix = [[2, 4], [6, 8]]
+	>>> matrix_divided(matrix, "hello")
+	Traceback (most recent call last):
+	TypeError: div must be a number
