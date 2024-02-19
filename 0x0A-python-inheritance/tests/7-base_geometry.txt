@@ -1,10 +1,24 @@
 This file contains tests for the BaseGeometry class
 
-First we import it.
+Checks for documentation.
 
 	>>> module_doc = __import__('7-base_geometry').__doc__
 	>>> len(module_doc) > 1
 	True
+
+	>>> class_doc = __import__('7-base_geometry').BaseGeometry.__doc__
+	>>> len(class_doc) > 1
+	True
+
+	>>> area_doc = __import__('7-base_geometry').BaseGeometry.area.__doc__
+	>>> len(area_doc) > 1
+	True
+
+	>>> int_val_doc = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+	>>> len(int_val_doc) > 1
+	True
+
+Importing the class
 
 	>>> BaseGeo = __import__('7-base_geometry').BaseGeometry
 
@@ -62,7 +76,7 @@ First we import it.
 	Traceback (most recent call last):
         TypeError: complex must be an integer
 	
-	>>> a.integer_validator("frozenset", frozenset[3,4])
+	>>> a.integer_validator("frozenset", frozenset([3,4]))
 	Traceback (most recent call last):
         TypeError: frozenset must be an integer
 
