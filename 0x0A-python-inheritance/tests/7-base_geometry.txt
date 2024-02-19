@@ -70,7 +70,7 @@ First we import it.
 	Traceback (most recent call last):
 	ValueError: integer must be greater than 0
 
-	>>> a.integer_validator('integer', -5)
+	>>> a.integer_validator('integer', -1)
         Traceback (most recent call last):
         ValueError: integer must be greater than 0
 
@@ -85,8 +85,3 @@ First we import it.
 	>>> a.integer_validator() # doctest: +ELLIPSIS
 	Traceback (most recent call last):
 	TypeError: ...
-
-
-
-	
-
