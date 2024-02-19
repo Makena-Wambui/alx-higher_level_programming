@@ -41,14 +41,3 @@ class MyInt(int):
         Performs __eq__ behavior
         """
         return super().__eq__(other)
-
-
-if __name__ == "__main__":
-    a = MyInt(1)
-    print(a)
-    b = MyInt(42)
-    print(b)
-    print(a != b)
-    c = MyInt(1)
-    print(c)
-    print(c == a)
