@@ -69,6 +69,11 @@ First we import it.
 	>>> a.integer_validator("bytes", b"abc")
 	Traceback (most recent call last):
         TypeError: bytes must be an integer
+	
+	>>> a.integer_validator("bytearrays", bytearray(b"abc"))
+	Traceback (most recent call last):
+        TypeError: bytearrays must be an integer
+
 
 	>>> a.integer_validator("integer", 0)
 	Traceback (most recent call last):
