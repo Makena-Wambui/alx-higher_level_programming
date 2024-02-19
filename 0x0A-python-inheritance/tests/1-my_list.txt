@@ -87,3 +87,12 @@ Import the class.
 	[3, 6, 8]
 	>>> l.print_sorted()
 	[3, 6, 8]
+
+	>>> b = MyList()
+	>>> b
+	[]
+	>>> b.append(5)
+	>>> b
+	[5]
+	>>> b.print_sorted()
+	[5]
