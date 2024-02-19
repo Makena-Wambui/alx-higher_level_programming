@@ -76,3 +76,7 @@ Import the class.
 	>>> b = MyList([90, 1000, 5])
 	>>> b.print_sorted()
 	[5, 90, 1000]
+
+	>>> lissst.print_sorted()
+	Traceback (most recent call last):
+	NameError: name 'lissst' is not defined
