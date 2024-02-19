@@ -42,7 +42,7 @@ First we import it.
 	Traceback (most recent call last):
         TypeError: list must be an integer
 
-	>>> a.integer_validator('set', {1, 2})
+	>>> a.integer_validator("set", {1, 2})
 	Traceback (most recent call last):
         TypeError: set must be an integer
 
@@ -58,19 +58,19 @@ First we import it.
 	Traceback (most recent call last):
         TypeError: complex must be an integer
 	
-	>>> a.integer_validator('frozenset', frozenset[3,4])
+	>>> a.integer_validator("frozenset", frozenset[3,4])
 	Traceback (most recent call last):
         TypeError: frozenset must be an integer
 
-	>>> a.integer_validator('bytes', b"abc")
+	>>> a.integer_validator("bytes", b"abc")
 	Traceback (most recent call last):
         TypeError: bytes must be an integer
 
-	>>> a.integer_validator('integer', 0)
+	>>> a.integer_validator("integer", 0)
 	Traceback (most recent call last):
 	ValueError: integer must be greater than 0
 
-	>>> a.integer_validator('integer', -1)
+	>>> a.integer_validator("integer", -1)
         Traceback (most recent call last):
         ValueError: integer must be greater than 0
 
@@ -78,7 +78,7 @@ First we import it.
 	Traceback (most recent call last):
 	TypeError: ...
 
-	>>> a.integer_validator('integer') # doctest: +ELLIPSIS
+	>>> a.integer_validator("integer") # doctest: +ELLIPSIS
 	Traceback (most recent call last):
         TypeError: ...
 
