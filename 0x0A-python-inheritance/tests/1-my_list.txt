@@ -96,3 +96,14 @@ Import the class.
 	[5]
 	>>> b.print_sorted()
 	[5]
+
+	>>> b.remove(5)
+	>>> b
+	[]
+	>>> b.print_sorted()
+	[]
+
+	>>> l1 = [10, 2, 6]
+	>>> l1 = MyList(l1)
+	>>> l1.print_sorted()
+	[2, 6, 10]
