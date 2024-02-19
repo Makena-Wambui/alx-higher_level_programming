@@ -1,0 +1,4 @@
+	>>> Rectangle = __import__('8-rectangle').Rectangle
+
+	>>> Rectangle(8, -9)
+

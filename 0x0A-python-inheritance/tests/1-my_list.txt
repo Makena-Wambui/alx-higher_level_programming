@@ -1,0 +1,58 @@
+Lets write tests for the MyList class.
+----------------------------------------
+
+Import the class.
+-----------------
+	>>> MyList = __import__('1-my_list').MyList
+
+	>>> a = MyList()
+	>>> print(isinstance(a, MyList))
+	True
+	>>> print(isinstance(a, list))
+	True
+	>>> print(type(a) is MyList)
+	True
+	>>> print(type(a) is list)
+	False
+
+	>>> print(a)
+	[]
+	
+	>>> b = MyList([1, -1])
+	>>> print(b)
+	[1, -1]
+
+	>>> b.print_sorted()
+	[-1, 1]
+
+	>>> b = MyList([1, 1])
+	>>> b.print_sorted()
+	[1, 1]
+
+	>>> b = MyList([10, 8, 9])
+	>>> b.print_sorted()
+	[8, 9, 10]
+
+	>>> b = MyList([10, 9, 8])
+	>>> b.print_sorted()
+	[8, 9, 10]
+
+	>>> b = MyList([8, 9, 10])
+	>>> b.print_sorted()
+	[8, 9, 10]
+
+	>>> b = MyList([8, 10, 9])
+	>>> b.print_sorted()
+	[8, 9, 10]
+
+	>>> b = MyList([-6, -4, -10])
+	>>> b.print_sorted()
+	[-10, -6, -4]
+
+	>>> b = MyList([8, -7, -20])
+	>>> b.print_sorted()
+	[-20, -7, 8]
+
+	>>> b = MyList([90, 1000, 5])
+	>>> b.print_sorted()
+	[5, 90, 1000]

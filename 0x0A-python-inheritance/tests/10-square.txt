@@ -1,0 +1,6 @@
+	>>> Square = __import__('10-square').Square
+	
+	>>> s1 = Square(0)
+	Traceback (most recent call last):
+	ValueError: size must be greater than 0
+

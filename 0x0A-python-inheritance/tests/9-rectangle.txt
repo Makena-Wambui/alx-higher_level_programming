@@ -1,0 +1,22 @@
+	>>> Rectangle = __import__('9-rectangle').Rectangle
+
+	>>> r1 = Rectangle(3, 5)
+	>>> print(r1)
+	[Rectangle] 3/5
+
+	>>> r2 = Rectangle(3, -5)
+	Traceback (most recent call last):
+	ValueError: height must be greater than 0
+
+	>>> r2 = Rectangle(0, 1)
+	Traceback (most recent call last):
+        ValueError: width must be greater than 0
+
+	>>> r1.area()
+	15
+
+	>>> r3 = Rectangle(10, 6)
+	>>> str(r3)
+	'[Rectangle] 10/6'
+
+	

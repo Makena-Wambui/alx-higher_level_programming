@@ -1,0 +1,92 @@
+This file contains tests for the BaseGeometry class
+
+First we import it.
+
+	>>> BaseGeo = __import__('7-base_geometry').BaseGeometry
+
+	>>> a = BaseGeo()
+	>>> a  # doctest: +ELLIPSIS
+	<7-base_geometry.BaseGeometry object at ...>
+
+	>>> b = BaseGeo(5) # doctest: +ELLIPSIS 
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> a.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+	>>> a.area(1) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> a.area(1, 2) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> a.integer_validator("integer", 7)
+
+	>>> a.integer_validator("string", "hello")
+	Traceback (most recent call last):
+	TypeError: string must be an integer
+
+	>>> a.integer_validator("float", 3.14)
+	Traceback (most recent call last):
+	TypeError: float must be an integer
+
+	>>> a.integer_validator("bool", False)
+	Traceback (most recent call last):
+        TypeError: bool must be an integer
+
+	>>> a.integer_validator("list", [1, 2])
+	Traceback (most recent call last):
+        TypeError: list must be an integer
+
+	>>> a.integer_validator('set', {1, 2})
+	Traceback (most recent call last):
+        TypeError: set must be an integer
+
+	>>> a.integer_validator("dict", {'a': 1, 'b': 2})
+	Traceback (most recent call last):
+        TypeError: dict must be an integer
+
+	>>> a.integer_validator("tuple", (1, 2))
+	Traceback (most recent call last):
+        TypeError: tuple must be an integer
+
+	>>> a.integer_validator("complex", complex(2, 5))
+	Traceback (most recent call last):
+        TypeError: complex must be an integer
+	
+	>>> a.integer_validator('frozenset', frozenset[3,4])
+	Traceback (most recent call last):
+        TypeError: frozenset must be an integer
+
+	>>> a.integer_validator('bytes', b"abc")
+	Traceback (most recent call last):
+        TypeError: bytes must be an integer
+
+	>>> a.integer_validator('integer', 0)
+	Traceback (most recent call last):
+	ValueError: integer must be greater than 0
+
+	>>> a.integer_validator('integer', -5)
+        Traceback (most recent call last):
+        ValueError: integer must be greater than 0
+
+	>>> a.integer_validator(a, 'integer', 1) # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+	>>> a.integer_validator('integer') # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+        TypeError: ...
+
+	>>> a.integer_validator() # doctest: +ELLIPSIS
+	Traceback (most recent call last):
+	TypeError: ...
+
+
+
+	
+
