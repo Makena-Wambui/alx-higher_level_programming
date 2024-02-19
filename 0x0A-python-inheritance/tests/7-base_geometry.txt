@@ -2,6 +2,10 @@ This file contains tests for the BaseGeometry class
 
 First we import it.
 
+	>>> module_doc = __import__('7-base_geometry').__doc__
+	>>> len(module_doc) > 1
+	True
+
 	>>> BaseGeo = __import__('7-base_geometry').BaseGeometry
 
 	>>> a = BaseGeo()
