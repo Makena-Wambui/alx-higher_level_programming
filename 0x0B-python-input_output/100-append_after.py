@@ -25,7 +25,7 @@ def append_after(filename="", search_string="", new_string=""):
     """
 
     # let us open the file for reading
-    file =''
+    file = ''
     with open(filename, encoding='utf-8') as f:
         for line in f:
             file = file + line
