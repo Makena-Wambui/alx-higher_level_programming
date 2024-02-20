@@ -108,3 +108,54 @@ If the file doesn’t exist, it should be created
 You must use the with statement
 You don’t need to manage file permission or file doesn't exist exceptions.
 You are not allowed to import any module
+
+Pascal's Triangle
+Technical interview preparation:
+
+You are not allowed to google anything
+Whiteboard first
+Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
+Returns an empty list if n <= 0
+You can assume n will be always an integer
+You are not allowed to import any module
+
+EXPLANATION OF PASCALS TRIANGLE
+--------------------------------
+It is a fascinating mathematical pattern
+It has applications in Probability Theory, Algebra, Combinatorics
+
+A Pascal's triangle is a triangular array of numbers
+
+Each number in the triangle represents a binomial coefficient, nCr
+n is the row number starting from 0
+r is the position within the row
+
+Named after the French Mathematician Blaise Pascal
+However it was known to other mathematicians centuries before him
+
+How do we construct it:
+------------------------
+Topmost row is row 0
+Contains a single non zero entity 1
+[1]
+
+Each subsequent row is constructed by adding adjacent numbers from the above row
+
+The second row, row 1, has two entries, 1 and 1 [1, 1] ie 0 + 1
+
+The 3rd row, row 2. will have [1, 2, 1]
+
+The entry in the ith row and jth column of a Pascals triangle is denoted as C(i,j)
+
+This represents the value of nCr
+	n is the row number 
+	r is the position within the row
+Formulae for binomial coeffaicients: C(i, j) = n! / (r! * (i - r)!)
+
+Helps calculate combinations, probabilities, permutations
+
+Used in algebraic expansions such as the binomail theorem
+
+It has fascinating patterns related to number theory
+
+
