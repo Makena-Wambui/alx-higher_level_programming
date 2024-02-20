@@ -98,3 +98,13 @@ You can assume json will always be a dictionary
 A dictionary key will be the public attribute name
 A dictionary value will be the value of the public attribute
 You are not allowed to import any module
+
+
+
+Write a function that appends a string at the end of a text file (UTF8) and returns the number of characters added:
+
+Prototype: def append_write(filename="", text=""):
+If the file doesn’t exist, it should be created
+You must use the with statement
+You don’t need to manage file permission or file doesn't exist exceptions.
+You are not allowed to import any module
