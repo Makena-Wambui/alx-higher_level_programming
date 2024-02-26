@@ -156,7 +156,7 @@ class Base:
         window = turtle.Screen()
 
         # setup window with size specifics
-        window.setup(width=800, heght=600)
+        window.setup(width=800, height=600)
 
         # create a turtle object
         obj = turtle.Turtle()
@@ -181,9 +181,11 @@ class Base:
             obj.penup()
             obj.goto(s.x, s.y)
             obj.pendown()
-            obj.colour("purple")
+            obj.color("purple")
             for b in range(4):
                 obj.forward(s.size)
                 obj.left(90)
+
         # close Turtle Graphics Window
         window.mainloop()
+        turtle.Screen().bye()
