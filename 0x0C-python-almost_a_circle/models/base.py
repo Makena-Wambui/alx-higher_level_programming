@@ -114,9 +114,9 @@ class Base:
         if type(dictionary) is dict and dictionary != {}:
             # first create a dummy instance
             if cls.__name__ == "Rectangle":
-                obj = cls(3, 4, 0, 1, 100)
+                obj = cls(3, 4)
             else:
-                obj = cls(2, 1, 3, 10)
+                obj = cls(10)
             # call update and pass dictionary
             obj.update(**dictionary)
 
@@ -176,7 +176,7 @@ class Base:
                 obj.left(90)
                 obj.forward(r.height)
                 obj.left(90)
-        
+
         # draw squares
         for s in list_squares:
             obj.penup()
