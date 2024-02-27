@@ -1235,6 +1235,19 @@ class TestSaveToFile(unittest.TestCase):
 
         self.assertEqual('[]', bytess)
 
+    def test_save_to_file(self):
+        """
+        Tests whether save_to_file successfully writes '[]'
+        if argument is [].
+        """
+        Rectangle.save_to_file([])
+        self.assertTrue(os.path.exists('Rectangle.json'))
+
+        with open('Rectangle.json', mode='r', encoding='utf-8') as r:
+            bytess = r.read()
+
+        self.assertEqual('[]', bytess)
+
 
 class TestCreate(unittest.TestCase):
     """
