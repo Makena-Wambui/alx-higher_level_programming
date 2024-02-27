@@ -29,10 +29,13 @@ class TestBase(unittest.TestCase):
 
         Tests the id attribute of the Base Class.
         """
+
+        q1 = Base()
+        self.assertEqual(q1.id, 1)
         # if i pass None to Base
 
         q = Base(None)
-        self.assertEqual(q.id, 1)
+        self.assertEqual(q.id, 2)
 
         # instantiate with id = 12
         b = Base(12)
@@ -41,11 +44,11 @@ class TestBase(unittest.TestCase):
 
         b1 = Base()
         # expect id = 2
-        self.assertEqual(b1.id, 2)
+        self.assertEqual(b1.id, 3)
 
         b2 = Base()
         # expect id = 3
-        self.assertEqual(b2.id, 3)
+        self.assertEqual(b2.id, 4)
 
         b3 = Base(-2)
         # expect id = -2
@@ -62,16 +65,16 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(AttributeError):
             a.__nb_objects
 
-        self.assertEqual(a._Base__nb_objects, 3)
+        self.assertEqual(a._Base__nb_objects, 4)
 
         b = Base(None)
-        self.assertEqual(a._Base__nb_objects, 4)
+        self.assertEqual(a._Base__nb_objects, 5)
 
         c = Base(30)
-        self.assertEqual(a._Base__nb_objects, 4)
+        self.assertEqual(a._Base__nb_objects, 5)
 
         d = Base()
-        self.assertEqual(a._Base__nb_objects, 5)
+        self.assertEqual(a._Base__nb_objects, 6)
 
     def test_too_many_arguments(self):
         """
