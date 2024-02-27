@@ -1296,28 +1296,42 @@ class TestLoad(unittest.TestCase):
     Contains methods that test the load_from_file class
     method.
     """
+    def setUp(self):
+        """
+        This method ensures the file we want to load from is removed,
+        if it exists,
+        before each test is run.
+        """
+        if os.path.exists('Rectangle.json'):
+            os.remove('Rectangle.json')
+
+    def tearDown(self):
+        """
+        This method cleans up after the test.
+        """
 
     def test_file_exists(self):
         """
         Test load_from_file with an existing file.
         """
-        if os.path.exists('Rectangle.json'):
-            with open('Rectangle.json', encoding='utf-8') as f:
-                list_of_objects = Rectangle.from_json_string(f.read())
-                list_of_objects = [obj for obj in list_of_objects]
+        r = Rectangle(3, 4)
+        r1 = Rectangle(2, 5)
+        d = r.to_dictionary()
+        d1 = r1.to_dictionary()
+        list_of_dicts = [d, d1]
 
-        objs = Rectangle.load_from_file()
-        list_of_os = [o.to_dictionary() for o in objs]
-        self.assertEqual(list_of_os, list_of_objects)
+        with open('Rectangle.json', encoding='utf-8', mode='w') as f:
+            f.write(Rectangle.to_json_string(list_of_dicts))
+
+        list_of_objs = Rectangle.load_from_file()
+        list_of_objs = [obj.to_dictionary() for obj in list_of_objs]
+        self.assertEqual(list_of_objs, list_of_dicts)
 
     def test_file_nonexistent(self):
         """
         Tests load_from_file against a non existent file.
         Should return []
         """
-        if os.path.exists('Rectangle.json'):
-            os.remove('Rectangle.json')
-
         empty = Rectangle.load_from_file()
         self.assertEqual(empty, [])
 
