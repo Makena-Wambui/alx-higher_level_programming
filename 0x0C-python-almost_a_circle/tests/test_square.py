@@ -3,6 +3,9 @@
 """
 This module contains tests for the Square Class.
 """
+
+import sys
+from io import StringIO
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -101,9 +104,9 @@ class TestInstantiation(unittest.TestCase):
         with self.assertRaises(NameError):
             square4.Square(2, 1, 1, 89)
 
-    def test_bad_input_size(self):
+    def test_bad_input(self):
         """
-        Test invalid input of size.
+        Test invalid input.
         """
 
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -126,3 +129,46 @@ class TestInstantiation(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             Square(1, 1, -1)
+
+
+class TestStr(unittest.TestCase):
+    """
+    Class: TestStr
+
+    Lets test the str method of class Square.
+    """
+
+    def test_str(self):
+        """
+        Tests for the str method of class Square.
+        """
+
+        square = Square(1)
+        sq_str = "[Square] ({}) 0/0 - 1".format(square.id)
+        self.assertEqual(sq_str, str(square))
+
+        square2 = Square(1, 2)
+        sq2_str = "[Square] ({}) 2/0 - 1".format(square2.id)
+        self.assertEqual(sq2_str, str(square2))
+
+        square3 = Square(1, 2, 1)
+        sq3_str = "[Square] ({}) 2/1 - 1".format(square3.id)
+        self.assertEqual(sq3_str, str(square3))
+
+        square4 = Square(1, 2, 1, 89)
+        sq4_str = "[Square] ({}) 2/1 - 1".format(square4.id)
+        self.assertEqual(sq4_str, str(square4))
+
+    def test_print(self):
+        """
+        Test if a call to print uses the str method.
+        """
+        string_capture = StringIO()
+        sys.stdout = string_capture
+
+        square = Square(1)
+        print(square)
+        string_capture = string_capture.getvalue().strip()
+        sys.stdout = sys.__stdout__
+
+        self.assertEqual(string_capture, square.__str__())
