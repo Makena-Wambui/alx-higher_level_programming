@@ -100,3 +100,29 @@ class TestInstantiation(unittest.TestCase):
 
         with self.assertRaises(NameError):
             square4.Square(2, 1, 1, 89)
+
+    def test_bad_input_size(self):
+        """
+        Test invalid input of size.
+        """
+
+        with self.assertRaisesRegex(TypeError, "width must be an integer"):
+            Square("1")
+
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(1, "1")
+
+        with self.assertRaisesRegex(TypeError, "y must be an integer"):
+            Square(1, 1, "1")
+
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(0)
+
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(-2)
+
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Square(1, -1)
+
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Square(1, 1, -1)
