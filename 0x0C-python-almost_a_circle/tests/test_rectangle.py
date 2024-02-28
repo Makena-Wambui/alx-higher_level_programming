@@ -1319,6 +1319,8 @@ class TestLoad(unittest.TestCase):
         """
         This method cleans up after the test.
         """
+        if os.path.exists('Rectangle.json'):
+            os.remove('Rectangle.json')
 
     def test_file_exists(self):
         """
