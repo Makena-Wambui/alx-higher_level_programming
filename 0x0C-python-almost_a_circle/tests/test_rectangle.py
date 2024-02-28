@@ -844,6 +844,16 @@ class TestKwargs(unittest.TestCase):
 
 
     """
+
+    def test_no_args(self):
+        """
+        This method tests for 0 args passed to update.
+        """
+        r = Rectangle(3, 4)
+        r.update()
+        updated_r = "[Rectangle] ({}) 0/0 - 3/4".format(r.id)
+        self.assertEqual(updated_r, r.__str__())
+
     def test_none_id(self):
         """
         Tests the kwargs argument of the update method.
