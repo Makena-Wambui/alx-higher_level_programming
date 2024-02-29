@@ -206,3 +206,97 @@ class TestDictionary(unittest.TestCase):
         square4 = Square(6, 2, 1, 100)
         square4_dict = {"id": 100, "x": 2, "size": 6, "y": 1}
         self.assertDictEqual(Square.to_dictionary(square4), square4_dict)
+
+
+class TestUpdate(unittest.TestCase):
+    """
+    Class : TestUpdate
+
+    Let us test the update instance method.
+
+    """
+    def test_no_args(self):
+        """
+        No args passed to update.
+        """
+        square = Square(1, 0, 0, 90)
+        square_str = "[Square] ({}) 0/0 - 1".format(square.id)
+
+        square.update()
+
+        self.assertEqual(square_str, square.__str__())
+
+    def test_one_arg(self):
+        """
+        One arg passed to update.
+        """
+        square = Square(1, 0, 0, 90)
+
+        square.update(89)
+        square_str = "[Square] ({}) 0/0 - 1".format(square.id)
+        self.assertEqual(square_str, square.__str__())
+
+    def test_two_args(self):
+        """
+        Two args passed to update.
+        """
+        square = Square(4, 0, 0, 90)
+
+        square.update(89, 1)
+
+        square_str = "[Square] ({}) 0/0 - 1".format(square.id)
+
+        self.assertEqual(square_str, square.__str__())
+
+    def test_three_args(self):
+        """
+        Three args passed to update.
+        """
+        square = Square(4, 0, 0, 90)
+
+        square.update(89, 1, 2)
+        square_str = "[Square] ({}) 2/0 - 1".format(square.id)
+
+        self.assertEqual(square_str, square.__str__())
+
+    def test_four_args(self):
+        """
+        Four args passed to update.
+        """
+        square = Square(4, 0, 0, 90)
+        square.update(89, 1, 2, 3)
+
+        square_str = "[Square] ({}) 2/3 - 1".format(square.id)
+
+        self.assertEqual(square_str, square.__str__())
+
+    def test_excess_args(self):
+        """
+        Excess args passed to update.
+        """
+        square = Square(4, 0, 0, 90)
+        square.update(89, 1, 2, 3, 4)
+        square_str = "[Square] ({}) 2/3 - 1".format(square.id)
+
+        self.assertEqual(square_str, square.__str__())
+
+    def test_wrong_call(self):
+        """
+        update calleed by class only.
+        """
+        square = Square(4, 0, 0, 90)
+
+        with self.assertRaises(TypeError):
+            Square.update()
+
+    def test_call_with_class(self):
+        """
+        update called via class and object.
+        """
+        square = Square(4, 0, 0, 90)
+
+        Square.update(square, 100)
+
+        square_str = "[Square] ({}) 0/0 - 4".format(square.id)
+
+        self.assertEqual(square_str, square.__str__())
