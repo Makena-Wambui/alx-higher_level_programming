@@ -172,3 +172,37 @@ class TestStr(unittest.TestCase):
         sys.stdout = sys.__stdout__
 
         self.assertEqual(string_capture, square.__str__())
+
+
+class TestDictionary(unittest.TestCase):
+    """
+    Class: TestDictionary
+
+    Let us test the to_dictionary instance method.
+
+    """
+    def test_dict(self):
+        """
+        Regular test for to_dictionary
+        """
+        square = Square(1, 0, 0, 90)
+        square2 = Square(2, 1, 1, 89)
+
+        square_dict = {"id": 90, "x": 0, "size": 1, "y": 0}
+        square2_dict = {"id": 89, "x": 1, "size": 2, "y": 1}
+
+        self.assertDictEqual(square.to_dictionary(), square_dict)
+        self.assertDictEqual(square2.to_dictionary(), square2_dict)
+
+        with self.assertRaises(NameError):
+            square3.to_dictionary()
+
+        with self.assertRaises(TypeError):
+            square.to_dictionary(1, 2)
+
+        with self.assertRaises(TypeError):
+            Square.to_dictionary()
+
+        square4 = Square(6)
+        square4_dict = {"id": 1, "x": 0, "size": 6, "y": 0}
+        self.assertDictEqual(Square.to_dictionary(square4), square4_dict)
