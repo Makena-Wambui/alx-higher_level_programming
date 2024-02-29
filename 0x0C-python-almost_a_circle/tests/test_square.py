@@ -203,6 +203,6 @@ class TestDictionary(unittest.TestCase):
         with self.assertRaises(TypeError):
             Square.to_dictionary()
 
-        square4 = Square(6)
-        square4_dict = {"id": 1, "x": 0, "size": 6, "y": 0}
+        square4 = Square(6, 2, 1, 100)
+        square4_dict = {"id": 100, "x": 2, "size": 6, "y": 1}
         self.assertDictEqual(Square.to_dictionary(square4), square4_dict)
