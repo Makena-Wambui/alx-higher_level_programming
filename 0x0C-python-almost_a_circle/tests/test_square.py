@@ -309,7 +309,7 @@ class TestCreate(unittest.TestCase):
     Lets test the create class method.
     """
 
-    def test_1(self):
+    def test_one(self):
         """
         Pass dictionary {"id": 89}
         """
@@ -317,7 +317,7 @@ class TestCreate(unittest.TestCase):
         dict1 = {"id": 89, "x": 1, "size": 10, "y": 1}
         self.assertEqual(obj.to_dictionary(), dict1)
 
-    def test_2(self):
+    def test_two(self):
         """
         Pass dictionary {"id": 89, "size": 1}
         """
@@ -325,7 +325,7 @@ class TestCreate(unittest.TestCase):
         dict1 = {"id": 89, "x": 1, "size": 1, "y": 1}
         self.assertEqual(obj.to_dictionary(), dict1)
 
-    def test_3(self):
+    def test_three(self):
         """
         Pass {'id': 89, 'size': 1, 'x': 2}
         """
@@ -333,7 +333,7 @@ class TestCreate(unittest.TestCase):
         dict1 = {"id": 89, "x": 2, "size": 1, "y": 1}
         self.assertEqual(obj.to_dictionary(), dict1)
 
-    def test_4(self):
+    def test_four(self):
         """
         Pass { 'id': 89, 'size': 1, 'x': 2, 'y': 3 }
         """
@@ -341,7 +341,7 @@ class TestCreate(unittest.TestCase):
         dict1 = {"id": 89, "x": 2, "size": 1, "y": 3}
         self.assertEqual(obj.to_dictionary(), dict1)
 
-    def test_5(self):
+    def test_five(self):
         """
         Test with != dictionary.
         """

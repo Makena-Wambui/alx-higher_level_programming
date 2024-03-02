@@ -116,7 +116,7 @@ class Base:
             if cls.__name__ == "Rectangle":
                 obj = cls(3, 4)
             else:
-                obj = cls(10)
+                obj = cls(10, 1, 1, 90)
             # call update and pass dictionary
             obj.update(**dictionary)
 
