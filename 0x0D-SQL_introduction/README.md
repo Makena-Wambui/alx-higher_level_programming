@@ -46,20 +46,8 @@ Use to build or modify the structire of your tables or objects in your db.
 CREATE, DROP, ALTER, TRUNCATE
 
 What is DML?
-
-
-
-
-
-
-All Commands in DDL..
-
-
-
-
-
-All commands in DML....
-
+Data Manipulation Language.
+Used when working with the data in our databases.
 
 
 
