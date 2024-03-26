@@ -35,7 +35,8 @@ An open source DBMS that implements the relational model and uses SQL to manage 
 
 What are the major categories of SQL Statements?
 
-
+1. Data Definition Language
+2. Data Manipulation Language
 
 
 
