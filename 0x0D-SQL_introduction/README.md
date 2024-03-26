@@ -41,8 +41,9 @@ What are the major categories of SQL Statements?
 
 
 What is DDL?
-
-
+Data Definition Language or Data Description Language.
+Use to build or modify the structire of your tables or objects in your db.
+CREATE, DROP, ALTER, TRUNCATE
 
 What is DML?
 
