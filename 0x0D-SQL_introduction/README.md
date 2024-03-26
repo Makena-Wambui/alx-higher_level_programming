@@ -14,14 +14,21 @@ Navigational -> Relational -> SQL -> ObjecT Oriented.
 
 
 Types of DBMS
+1. Hierarchical
+2. Network
+3. Relational
+4. Object oriented relational DBMS
 
 
 
 What is SQL?
+Structured Query Language. Standard language used when dealing with relational databases.
+The language used to query for infor ffrom a db.
 
 
 
 What is MySql?
+An open source DBMS that implements the relational model and uses SQL to manage its data.
 
 
 
