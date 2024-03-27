@@ -17,3 +17,7 @@ SET
 NOT NULL
 UNIQUE
 
+AUTO INCREMENT FEATURE:
+Allows you to automatically generate unque values in a column every time a new row is inserted into a table.
+Useful for creating primary key fields that need to be created automatically every time a new record is inserted.
+Use AUTO_INCREMENT Keyword.
