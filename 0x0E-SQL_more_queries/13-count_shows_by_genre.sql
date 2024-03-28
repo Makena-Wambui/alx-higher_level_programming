@@ -1,9 +1,10 @@
--- lists all shows contained in hbtn_0d_tvshows without a genre linked.
--- Each record should display: tv_shows.title - tv_show_genres.genre_id
--- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
--- Only one SELECT statement
--- If a show doesn’t have a genre, display NULL
--- Use a LEFT OUTER JOIN clause, IS NULL to achieve this
+-- lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
+-- Each record should display: <TV Show genre> - <Number of shows linked to this genre>
+-- First column must be called genre
+-- Second column must be called number_of_shows
+-- Don’t display a genre that doesn’t have any shows linked
+-- Results must be sorted in descending order by the number of shows linked
+-- You can use only one SELECT statement 
 SELECT A.name genre,
 COUNT(*) number_of_shows
 FROM tv_genres A
