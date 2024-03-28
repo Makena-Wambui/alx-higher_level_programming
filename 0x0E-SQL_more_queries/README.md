@@ -36,3 +36,17 @@ Cannot have ORDER BY statement, but can use GROUP BY
 INNER JOIN:
 All shared data between two relations.
 All records existing in both relations that match the ON condition
+
+FULL JOIN
+Fetch all data from left
+Fetch all data from right.
+If record exists on right but not on left, then Null and viceversa
+
+FULL JOIN WITHOUT INTERSECTION
+ALL in both
+Excludes those in common.
+
+LEFT JOIN
+ALL data from left
+Only matching from right.
+Non matching in right = NULL
