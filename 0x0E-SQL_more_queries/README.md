@@ -32,3 +32,7 @@ Can be used with SELECT, INSERT INTO, UPDATE and DELETE FROM statements.
 
 Enclosed in ()
 Cannot have ORDER BY statement, but can use GROUP BY
+
+INNER JOIN:
+All shared data between two relations.
+All records existing in both relations that match the ON condition
