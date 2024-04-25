@@ -2,6 +2,7 @@
 """
 Write a script that takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa where name matches the argument.
+This script is safe from SQL Injection by using parameterized queries.
 """
 
 import MySQLdb
@@ -18,9 +19,9 @@ if __name__ == "__main__":
     cur = mydb.cursor()
 
     # use the execute  function
-    # You must use format to create the SQL query with the user input
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}'"
-                .format(sys.argv[4]))
+    # Use parameterized query passed as tuple to the execute function.
+    state_name = sys.argv[4]
+    cur.execute("SELECT * FROM states WHERE name LIKE %s", (state_name, ))
 
     rows = cur.fetchall()
     for all in rows:
