@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Write a script that lists all states with a name starting with N
-(upper N) from the database hbtn_0e_0_usa
+Write a script that takes in an argument and displays all values
+in the states table of hbtn_0e_0_usa where name matches the argument.
 """
 
 import MySQLdb
@@ -18,7 +18,8 @@ if __name__ == "__main__":
     cur = mydb.cursor()
 
     # use the execute  function
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    # You must use format to create the SQL query with the user input
+    cur.execute("SELECT * FROM states WHERE name LIKE '{}'".format(sys.argv[4]))
 
     rows = cur.fetchall()
     for all in rows:
