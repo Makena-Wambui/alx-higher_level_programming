@@ -26,12 +26,15 @@ if __name__ == "__main__":
     session = Session()
 
     # lets create a new State object
-    louisiana = State(6, "Louisiana")
+    louisiana = State(name="Louisiana")
 
     # lets persist our object
     session.add(louisiana)
 
-    # commit the transaction
-    session.commit()
+    # lets query the model for the louisiana object
+    louisiana = session.query(State).filter_by(name="Louisiana").first()
 
     print(louisiana.id)
+
+    # commit the transaction
+    session.commit()
