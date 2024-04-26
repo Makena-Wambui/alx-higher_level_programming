@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     # use the execute  function
     # You must use format to create the SQL query with the user input
-    cur.execute("SELECT * FROM states WHERE name LIKE '{}'"
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                 .format(sys.argv[4]))
 
     rows = cur.fetchall()
