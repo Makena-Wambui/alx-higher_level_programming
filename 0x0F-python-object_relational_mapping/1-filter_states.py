@@ -17,8 +17,8 @@ if __name__ == "__main__":
     # create a cursor object
     cur = mydb.cursor()
 
-    # use the execute  function
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    # use the execute  function and LIKE BINARY To force case sensitivity
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'")
 
     rows = cur.fetchall()
     for all in rows:
