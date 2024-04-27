@@ -32,7 +32,7 @@ if __name__ == "__main__":
         allStates = session.query(State).order_by(State.id).all()
         for state in allStates:
             print(f"{state.id}: {state.name}")
-            for city in sorted(state.cities, key=lambda c: c.id):
+            for city in state.cities:
                 print("    ", end="")
                 print("{}: {}".format(city.id, city.name))
     except Exception as e:
