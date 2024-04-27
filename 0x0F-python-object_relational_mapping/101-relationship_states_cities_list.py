@@ -29,11 +29,12 @@ if __name__ == "__main__":
     session = Session()
 
     try:
-        allStates = session.query(State).all()
+        allStates = session.query(State).order_by(State.id).all()
         for state in allStates:
             print(f"{state.id}: {state.name}")
             for city in state.cities:
-                print("\t{}: {}".format(city.id, city.name))
+                print(" ", end="")
+                print("{}: {}".format(city.id, city.name))
     except Exception as e:
         print(e)
 
