@@ -26,4 +26,4 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
     # let us create a relationship with City using the relationship directive
-    cities = relationship('City', back_populates="states")
+    cities = relationship('City', back_populates="state")
