@@ -28,15 +28,9 @@ if __name__ == "__main__":
     # create a Session object
     session = Session()
 
-    try:
-        allStates = session.query(State).order_by(State.id).all()
-        for state in allStates:
-            print(f"{state.id}: {state.name}")
-            for city in state.cities:
-                print(" ", end="")
-                print("{}: {}".format(city.id, city.name))
-    except Exception as e:
-        print(e)
-
-    finally:
-        session.close()
+    allStates = session.query(State).order_by(State.id).all()
+    for state in allStates:
+        print(f"{state.id}: {state.name}")
+        for city in state.cities:
+            print("    ", end="")
+            print("{}: {}".format(city.id, city.name))
