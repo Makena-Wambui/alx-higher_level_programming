@@ -6,10 +6,10 @@ with the City “San Francisco” from the database hbtn_0e_100_usa
 """
 
 import sys
-from model_state import Base, State
-from model_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from relationship_state import Base, State
+from relationship_city import City
 
 
 if __name__ == "__main__":
@@ -42,7 +42,6 @@ if __name__ == "__main__":
         # commit the transaction
         session.commit()
 
-        print("Success")
     except Exception as e:
         session.rollback()
         print(f"{e}")
