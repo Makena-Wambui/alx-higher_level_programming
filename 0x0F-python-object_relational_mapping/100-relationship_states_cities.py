@@ -27,16 +27,25 @@ if __name__ == "__main__":
     # create a Session object
     session = Session()
 
-    # create a state
-    calif = State(name="California")
+    try:
+        # create a state
+        calif = State(name="California")
 
-    # create a city
-    sf = City(name="San Francisco")
+        # create a city
+        sf = City(name="San Francisco")
 
-    # add that new city to the list of cities
-    calif.cities.append(sf)
+        # add that new city to the list of cities
+        calif.cities.append(sf)
 
-    session.add_all([calif, sf])
+        session.add(calif)
 
-    # commit the transaction
-    session.commit()
+        # commit the transaction
+        session.commit()
+
+        print("Success")
+    except Exception as e:
+        session.rollback()
+        print(f"{e}")
+
+    finally:
+        session.close()
