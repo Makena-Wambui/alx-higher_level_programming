@@ -28,7 +28,7 @@ if __name__ == "__main__":
     # create a Session object
     session = Session()
 
-    allStates = session.query(State).order_by(State.id).all()
+    allStates = session.query(State).order_by(State.id)
     for state in allStates:
         print(f"{state.id}: {state.name}")
         for city in state.cities:
