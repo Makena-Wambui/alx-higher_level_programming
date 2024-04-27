@@ -28,9 +28,14 @@ if __name__ == "__main__":
     # create a Session object
     session = Session()
 
-    allStates = session.query(State).order_by(State.id)
-    for state in allStates:
-        print(f"{state.id}: {state.name}")
-        for city in state.cities:
-            print("    ", end="")
-            print("{}: {}".format(city.id, city.name))
+    try:
+        allStates = session.query(State).order_by(State.id).all()
+        for state in allStates:
+            print(f"{state.id}: {state.name}")
+            for city in sorted(state.cities, key=lambda c: c.id):
+                print("    ", end="")
+                print("{}: {}".format(city.id, city.name))
+    except Exception as e:
+            print(e)
+    finally:
+            session.close()
