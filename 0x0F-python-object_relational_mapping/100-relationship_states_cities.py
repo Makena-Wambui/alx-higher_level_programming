@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-Write a script that prints all City objects
-from the database hbtn_0e_14_usa
+Write a script that creates the State “California”
+with the City “San Francisco” from the database hbtn_0e_100_usa
 """
 
 import sys
@@ -30,10 +30,13 @@ if __name__ == "__main__":
     # create a state
     calif = State(name="California")
 
-    # add cities to calif
-    calif.cities = [City(name="San Francisco")]
+    # create a city
+    sf = City(name="San Francisco")
 
-    session.add(calif)
+    # add that new city to the list of cities
+    calif.cities.append(sf)
+
+    session.add_all([calif, sf])
 
     # commit the transaction
     session.commit()
