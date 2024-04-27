@@ -8,7 +8,7 @@ contained in the database hbtn_0e_101_usa.
 
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, relationship
 from relationship_state import Base, State
 from relationship_city import City
 
@@ -36,6 +36,6 @@ if __name__ == "__main__":
                 print("    ", end="")
                 print("{}: {}".format(city.id, city.name))
     except Exception as e:
-            print(e)
+        print(e)
     finally:
-            session.close()
+        session.close()
