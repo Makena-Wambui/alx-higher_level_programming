@@ -31,5 +31,5 @@ if __name__ == "__main__":
     # If the table states is empty, print Nothing followed by a new line
     if first_entry:
         print("{}: {}".format(first_entry.id, first_entry.name))
-    else:
+    elif first_entry is None:
         print("Nothing")
