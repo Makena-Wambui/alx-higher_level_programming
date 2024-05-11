@@ -21,10 +21,13 @@ What an HTTP response is
 What HTTP headers are
 What the HTTP message body is
 What an HTTP request method is
-What an HTTP response status code is
+What an HTTP response status code is:
+When a browser requests for a service from a web service, the server returns a response code called a status code.
 
 What an HTTP Cookie is:
 A small piece of data that the server sends to the user's browser.It stores a limited amount of data and remembers state information
 
-How to make a request with cURL
+How to make a request with cURL:
+cURL is a command line utility. Stands for client url. Enables data transfer over various nettwork protocols. Communicates with a web or application server by specifying a relevant url and the data that needs to be sent or received. Used for debugging, downloading files from the internet, error logging and endpoint testing.
+
 What happens when you type google.com in your browser (Application level)
