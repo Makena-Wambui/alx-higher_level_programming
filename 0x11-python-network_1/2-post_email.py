@@ -14,6 +14,7 @@ You must use a with statement.
 import sys
 import urllib.request
 import urllib.parse
+import urllib.error
 
 
 if __name__ == "__main__":
@@ -29,7 +30,10 @@ if __name__ == "__main__":
     request = urllib.request.Request(url, data)
 
     # call urlopen on request
-    with urllib.request.urlopen(request) as response:
-        response = response.read()
-        response = response.decode("utf-8")
-        print(response)
+    try:
+        with urllib.request.urlopen(request) as response:
+            response = response.read()
+            response = response.decode("utf-8")
+            print(response)
+    except urllib.error.URLError:
+        pass
