@@ -28,8 +28,5 @@ if __name__ == "__main__":
 
     response = requests.get(url, auth=basic)
 
-    if response.status_code == 200:
-        r = response.json()
-        print(r.get('id'))
-    else:
-        print("Failed..Status code: {}".format(response.status_code))
+    r = response.json()
+    print(r.get('id'))
