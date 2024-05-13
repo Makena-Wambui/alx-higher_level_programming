@@ -29,4 +29,4 @@ if __name__ == "__main__":
         r = response.json()
         print(r.get('id'))
     else:
-        print("Failed to fetch data. Status code: {}".format(response.status_code))
+        print("Failed..Status code: {}".format(response.status_code))
