@@ -18,7 +18,7 @@ import urllib.parse
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email_val = str(sys.argv[2])
+    email_val = sys.argv[2]
     email = {"email": "email_val"}
 
     # first encode the email using the urlencode function
@@ -30,6 +30,6 @@ if __name__ == "__main__":
 
     # call urlopen on request
     with urllib.request.urlopen(request) as response:
-        response = respons.read()
+        response = response.read()
         response = response.decode("utf-8")
         print(response)
