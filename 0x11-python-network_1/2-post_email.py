@@ -20,7 +20,7 @@ import urllib.error
 if __name__ == "__main__":
     url = sys.argv[1]
     email_val = sys.argv[2]
-    email = {"email": "email_val"}
+    email = {"email": email_val}
 
     # first encode the email using the urlencode function
     email = urllib.parse.urlencode(email)
