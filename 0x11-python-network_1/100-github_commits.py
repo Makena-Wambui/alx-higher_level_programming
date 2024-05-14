@@ -29,4 +29,4 @@ if __name__ == "__main__":
                                   r[i].get("commit")
                                       .get("author").get("name")))
     except Exception:
-        print("Not a valid JSON")
+        pass
