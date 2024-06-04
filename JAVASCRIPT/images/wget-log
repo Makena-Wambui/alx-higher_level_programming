@@ -1,0 +1,15 @@
+--2024-05-27 13:13:03--  https://www.google.com/search?sca_esv=8870e14de2d74e2a
+Resolving www.google.com (www.google.com)... 172.217.170.164, 2a00:1450:401a:801::2004
+Connecting to www.google.com (www.google.com)|172.217.170.164|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.google.com/webhp?sca_esv=8870e14de2d74e2a [following]
+--2024-05-27 13:13:04--  https://www.google.com/webhp?sca_esv=8870e14de2d74e2a
+Reusing existing connection to www.google.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘search?sca_esv=8870e14de2d74e2a’
+
+search?sca_esv=8870e14de2d74e2a        [<=>                                                            ]       0  --.-KB/s               search?sca_esv=8870e14de2d74e2a        [ <=>                                                           ]  20.12K  --.-KB/s    in 0.01s   
+
+2024-05-27 13:13:04 (1.54 MB/s) - ‘search?sca_esv=8870e14de2d74e2a’ saved [20603]
+
