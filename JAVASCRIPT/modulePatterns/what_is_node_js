@@ -1,0 +1,18 @@
+
+Node.JS -> A Common.JS Module implementation
+Code uses -----require---- to include modules
+Modules use exports to make things available.
+
+Common.JS => An ecosystem for JavaScript outside the browser.
+	Modules
+	Promises
+	Binary
+	FileSystem
+	Console
+	System
+	Testing
+
+Common.JS Implementations:
+	MongoDB
+	Node.JS
+	CouchDB
