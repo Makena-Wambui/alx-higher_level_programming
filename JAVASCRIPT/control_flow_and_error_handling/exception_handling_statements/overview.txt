@@ -1,0 +1,8 @@
+You can throw exceptions using the throw statement.
+You can handle exceptions using the try....catch statement
+
+Any object can be thrown as an exception in JS.
+But not all thrown objects are created equal.
+It is common to throw numbers or strings as errors.
+However it is more effective to use one of the exception types -> ECMAScript Exceptions, DOMException.
+
