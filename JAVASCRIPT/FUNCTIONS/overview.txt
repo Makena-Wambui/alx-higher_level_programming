@@ -1,0 +1,4 @@
+What are functions?
+Reusable blocks of code.
+They allow us to store a piece of code that does a single task inside a defined block.
+Then we call that code whenever we need it using a single short command, rather than typing out the same code multiple times.
