@@ -257,3 +257,25 @@ function MyPerson(name) {
 const woman1 = new MyPerson("Monica");
 console.log(woman1.name);
 console.log(woman1.introduceSelf());
+
+
+const myString = "I am a beautiful soul.";
+const myArr = myString.split(" ");
+console.log(myArr);
+// split() is a method available on a String object.
+// Every time you create a string, the string is automatically created as an instance of String.
+// Hence has several methods and properties available on it.
+//
+//
+//
+// When you accessed the dom using the following lines:
+// const myDiv = document.createElement("div");
+// const myButton = document.querySelector("button");
+// You are using methods available on a Document object.
+//
+// For each webpage loaded;
+// an instance of Document is created => document.
+// This represent the entire page's structure, content, and other features like its URL.
+// Hence has several methods and properties available on it.
+// This holds true for pretty much any built in API or object eg Array, Math etc
+//
