@@ -42,7 +42,7 @@ console.log(myPerson.name)
 const myPerson2 = new Person();
 console.log(myPerson2.name);
                                                              
-console.log(myPerson2.introduceSelf());
+myPerson2.introduceSelf();
 // Note we call the constructor using the name of the class Person.
 //
 //
@@ -57,7 +57,7 @@ class Animal {
 }
 
 const levine = new Animal();
-console.log(levine.sleep());
+levine.sleep();
 
 // Let us define a Professor subclass.
 class Professor extends Person {
@@ -98,5 +98,108 @@ class Professor extends Person {
 const walsh = new Professor("Walsh", "Statistics");
 console.log(walsh.name)
 console.log(walsh.teaches);
-console.log(walsh.introduceSelf());
-console.log(walsh.grade("Probability"));
+walsh.introduceSelf();
+walsh.grade("Probability");
+
+
+// Encapsulation
+// --------------
+// We can make the year property of the Student class private.
+class Student extends Person {
+	#year;
+
+	constructor(name, year) {
+		super(name);
+		this.#year = year;
+	}
+
+	introduceSelf() {
+		console.log(`Hello I am ${this.name} and I am in year ${this.#year}`);
+	}
+
+	canStudyArchery() {
+		return this.#year > 2;
+	}
+}
+// #year -> a private data property
+// Student objects can use year internally, but if code outside the object tries to access #year, error is thrown.
+const student = new Student("Timothy", 3);
+console.log(student.name);
+console.log(student.year);
+// console.log(student.#year);
+console.log(student.canStudyArchery());
+student.introduceSelf();
+// private data properties must be declared in the class declaration.
+// They must start with #.
+
+
+// PRIVATE METHODS
+// ----------------
+// Private methods + private data properties.
+// Their names start with #.
+// They can only be called by the object's own methods.
+// For ex:
+
+class Example {
+	somePublicMethod() {
+		this.#somePrivateMethod();
+
+	}
+
+
+	#somePrivateMethod() {
+		console.log("You called me?");
+	}
+}
+
+const a = new Example();
+a.somePublicMethod();
+// console.log(a.#somePrivateMethod());
+//
+//
+class Shape {
+
+  name;
+  sides;
+  sideLength;
+
+  constructor(name, sides, sideLength) {
+    this.name = name;
+    this.sides = sides;
+    this.sideLength = sideLength;
+  }
+  calcPerimeter() {
+     const perimeter = this.sides * this.sideLength;
+     return perimeter;
+  }
+}
+const square = new Shape("square", 4, 5);
+console.log(square.calcPerimeter());
+
+
+const triangle = new Shape("triangle", 3, 3); 
+console.log(triangle.calcPerimeter());   
+
+class Square extends Shape {
+	calcArea() {
+		const area = this.sideLength * this.sideLength;
+		return area;
+	}
+
+	constructor(sideLength) {
+		super("square", 4, sideLength);
+		
+	}
+}
+
+const square2 = new Square(10);
+console.log(square2.calcArea());
+console.log(square2.name);
+console.log(square2.sides);
+
+
+const square3 = new Square(6);
+console.log(square3.calcArea());
+console.log(square3.calcPerimeter());
+console.log(square3.name);
+console.log(square3.sides);
