@@ -2,9 +2,8 @@
 
 // Import the required modules
 const fs = require('fs');
-const path = require('path');
 
-function concatenateFiles(sourceFilePath1, sourceFilePath2, destinationFilePath) {
+function concatenateFiles (sourceFilePath1, sourceFilePath2, destinationFilePath) {
   try {
     // Read the contents of the first source file
     const content1 = fs.readFileSync(sourceFilePath1, 'utf8');
@@ -17,12 +16,10 @@ function concatenateFiles(sourceFilePath1, sourceFilePath2, destinationFilePath)
 
     // Write the concatenated content to the destination file
     fs.writeFileSync(destinationFilePath, concatenatedContent);
-
   } catch (error) {
     console.error('Error concatenating files:', error.message);
   }
 }
-
 
 // Get the file paths from command-line arguments
 const sourceFile1 = process.argv[2];
