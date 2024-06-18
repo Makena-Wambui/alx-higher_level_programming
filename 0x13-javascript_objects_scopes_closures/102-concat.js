@@ -1,14 +1,10 @@
 #!/usr/bin/node
 
-// Write a script that concats 2 files.
-// The first argument is the file path of the first source file
-// The second argument is the file path of the second source file
-// The third argument is the file path of the destination
-
+// Import the required modules
 const fs = require('fs');
 const path = require('path');
 
-function concatenateFiles (sourceFilePath1, sourceFilePath2, destinationFilePath) {
+function concatenateFiles(sourceFilePath1, sourceFilePath2, destinationFilePath) {
   try {
     // Read the contents of the first source file
     const content1 = fs.readFileSync(sourceFilePath1, 'utf8');
@@ -22,14 +18,16 @@ function concatenateFiles (sourceFilePath1, sourceFilePath2, destinationFilePath
     // Write the concatenated content to the destination file
     fs.writeFileSync(destinationFilePath, concatenatedContent);
 
-    console.log(destinationFilePath);
   } catch (error) {
     console.error('Error concatenating files:', error.message);
   }
 }
 
-// The __dirname variable represents the current directory where your script resides.
-const sourceFile1 = path.resolve(__dirname, 'fileA');
-const sourceFile2 = path.resolve(__dirname, 'fileB');
-const destinationFile = path.resolve(__dirname, 'fileC');
+
+// Get the file paths from command-line arguments
+const sourceFile1 = process.argv[2];
+const sourceFile2 = process.argv[3];
+const destinationFile = process.argv[4];
+
+// Call the function to concatenate the files
 concatenateFiles(sourceFile1, sourceFile2, destinationFile);
