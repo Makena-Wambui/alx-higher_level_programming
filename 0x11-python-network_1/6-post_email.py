@@ -12,13 +12,11 @@ You must use the packages requests and sys.
 import requests
 import sys
 
-
 if __name__ == "__main__":
     url = sys.argv[1]
-
     email_val = sys.argv[2]
-    data = {"email": "email_val"}
+    data = {"email": email_val}
 
-    r = requests.post(url, data)
+    r = requests.post(url, data=data)
 
     print(r.text)
