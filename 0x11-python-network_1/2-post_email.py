@@ -13,20 +13,21 @@ You must use a with statement.
 
 import sys
 import urllib.request
+import urllib.parse
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    email = sys.argv[2]  # Get the email from the command line arguments
 
-    # Create a Request object
-    request = urllib.request.Request(url)
+    # Create a dictionary with the email parameter
+    data = {"email": email}
+    data_encoded = urllib.parse.urlencode(data).encode("utf-8")
+
+    # Create a Request object with the POST method
+    request = urllib.request.Request(url, data=data_encoded, method="POST")
 
     # Call urlopen on the request and handle the response
     with urllib.request.urlopen(request) as response:
-        # Get all headers from the response
-        headers = response.getheaders()
-
-        # Extract the X-Request-Id header
-        for header in headers:
-            if header[0].lower() == 'x-request-id':
-                print(header[1])
-                break
+        # Read and decode the response body
+        response_body = response.read().decode("utf-8")
+        print(response_body)
