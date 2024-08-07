@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<title>append and prepend methods</title>
+	</head>
+
+	<body>
+		<!--
+			Adding new stuff to existing elements is very easy with jQuery.
+			There are methods for appending or prepending.
+			These methods take HTML in string format.
+				DOM Elements and jQuery objects as parameters.
+			How to use append and prepend to insert new elements in a list:
+		-->
+		<a href="javascript:void(0);" onclick="$('#olTestList1').append('<li>Appended Item</li>')">Append method</a><br />
+		<a href="javascript:void(0);" onclick="$('#olTestList1').prepend('<li>Prepended Item</li>')">Prepend method</a><br />
+
+		<ol id="olTestList1">
+			<li>Existing item 1</li>
+			<li>Existing Item 2</li>
+		</ol>
+
+		<!--
+			We could have generated the items to add to the list with jQuery,
+			Or created them with regular js code and DOM elements.
+			Both append and prepend take an infinite amount of new elements as parameters.
+		-->
+
+		<a href="javascript:void(0);" onclick="AppendItemsToList()">Link3</a><br />
+
+		<ol id="olTestList2"></ol>
+
+		<script type="text/javascript">
+			function AppendItemsToList() {
+					const item1 = $("<li></li>").html("<b>Item 1</b>");
+					const item2 = "<li>Item 2</li>";
+					const item3 = document.createElement("li");
+					item3.innerHTML= "Item 3";
+
+					$("#olTestList2").append(item1, item2, item3);
+				}
+		</script>
+
+		<!--
+			appendTo() and prependTo(): these are variations of append() and prepend()
+
+			They do pretty much the same, but they do it the other way around,
+			so instead of calling them on the elements you wish to append/prepend to,
+			with a parameter of what is to be appended/prepended, you do the exact opposite.
+		-->
+		<a href="javascript:void(0);" onclick="PrependItemsToList()">Link 4</a><br />
+		<ol id="olTestList3"></ol>
+
+		<script type="text/javascript">
+			function PrependItemsToList() {
+					const my_item = $("<li></li>").text("prepend() Item ");
+					$("#olTestList3").prepend(my_item);
+
+					const my_item2 = $("<li></li>").text("prependTo() item");
+					my_item2.prependTo($("#olTestList3"));
+				}
+
+		</script>
+
+	</body>
+</html>
