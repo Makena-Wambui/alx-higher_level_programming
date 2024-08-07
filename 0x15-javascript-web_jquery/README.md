@@ -58,3 +58,47 @@ HTML:
 	<div id="exampleHtml">Hello <b>World</b>!</div>
 	HTML is Hello <b>World</b>!
 
+
+INTRO TO AJAX
+----------------
+
+AJAX -> Asynchronous Javascript And XML
+Allows you to load data in the background and display it on your webpage,
+without refreshing the web page.
+Allowing you to create websites with much richer functionality.
+
+Gmail, Google Maps, Outlook and other popular web applications use Ajax extensively.
+Thus providing you with a more responsive desktop like experience.
+
+Using AJAX can be a bit cumbersome.
+This is because various browsers have different implementations to support Ajax.
+This would normally force you to write code to respond differently to different browsers.
+Fortunately, jQuery has done this for us.
+This allows us to write Ajax functionality with very few lines of code.
+
+There are advantages and disadvantages of using Ajax on your page:
+
+Advantages:
+1. Your page is much more pleasant to use.
+	You can update parts of your page without a refresh.
+	Refreshing usually cause the browser to flicker and the status bar to run
+
+2. You only load the data you need to update the page.
+You do not need to refresh the entire page.
+thus saving you bandwidth.
+
+Disadvantages.
+1. The updates are done by javascript on the client.
+The state does not register on the browser's history.
+Makes it impossible to use the back and forward buttons to navigate btwn various states of the page.
+
+2. Because of the same reason, a specific state can not be bookmarked by the user.
+
+3. Data loaded through Ajax is not indexed by any of the major search engines.
+
+4. People who use browsers that do not have Js support, or with JS disabled,
+will not be able to use the functionality that you provide through ajax.
+
+
+
+
