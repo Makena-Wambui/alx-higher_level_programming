@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<HTML lang="en"> 
+	<HEAD>
+		<META charset="UTF-8">
+		<TITLE>TEXT VS VALUE VS HTML</TITLE>
+		<SCRIPT src="https://code.jquery.com/jquery-3.2.1.min.js"></SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<DIV id="exampleText">Hello <b>World</b>!</DIV>
+		<INPUT type="text" id="exampleValue" value="examplevalue">
+		<DIV id="exampleHtml">Hello <b>World</b>!</DIV>
+
+		<SCRIPT>
+			// get text content
+			//const text = document.getElementById("exampleText").textContent;
+			//console.log(text);
+
+			//const val = document.getElementById("exampleValue").value;
+			//console.log(val);
+
+			//const innerHTML = document.getElementById("exampleHtml").innerHTML;
+			//console.log(innerHTML);
+		</SCRIPT>
+
+		<DIV id="divTest">
+			<b>Test</b>
+			<input type="text" id="txtTest" name="txtTest" value="Input Field">
+		</DIV>
+
+		<DIV id="divText"></DIV>
+		<DIV id="divHtml"></DIV>
+
+		<P>Paragraph 1</P>
+		<P>Paragraph 2</P>
+		<P>Paragraph 3</P>
+
+		<DIV id="testhtml">Testing oldHtml</DIV>
+		
+		
+		<SCRIPT type="text/javascript">
+			$(function()
+			{
+				alert("Text: " + $("#divTest").text());
+				console.log($("#divTest").text());
+				alert("HTML: " + $("#divTest").html());
+				alert("VALUE: " + $("#divTest").val());
+			});
+
+			$(function()
+			{
+				alert("Text: " + $("#txtTest").text());
+				alert("HTML: " + $("#txtTest").html());
+				alert("Value: " + $("#txtTest").val());
+
+			});
+
+			// To set these properties using the above jQuery methods, you pass an extra parameter.
+			$(function()
+			{
+				$("#divText").text("A dynamically set text");
+				$("#divHtml").html("<b><i>A dynamically set HTML string.</i></b>");
+				$("#txtTest").val("A dynamically set value.");
+			});
+
+			// These three functions comes with one overload more,
+			// where you specify a callback function as the first and only parameter.
+			// This callback function will be called with two parameters by jQuery:
+			// 	the index of the current element in the list of elements selected,
+			//	the existing value, before it's replaced with a new value.
+			// then return the string that you wish to use as the new value from the function
+
+			// Explanation
+			//1.jQuery Initialization:
+			//	The $(function() {...}) syntax is a shorthand for $(document).ready(function() {...}).
+			//	This ensures that the script runs after the DOM is fully loaded.
+			// 2. Selecting <p> Elements: The $("p") selector targets all <p> elements in the document.
+			// 3. text Method with Callback:
+			//	The text method is called on the selected <p> elements.
+			//	When a function is passed to the text method,
+			//	jQuery will execute this function for each matched element.
+			//	The function takes two parameters:
+			//		index: The zero-based index of the element in the jQuery collection.
+			//		oldText: The current text content of the element.
+			// For each <p> element, the function returns a new string that includes:
+			//		"Existing text: " + oldText: The existing text content of the element.
+			//		". New text: A dynamically set text (#" + index + ")":
+			//			A new text string that includes the index of the element
+
+			$(function()
+			{
+				$("p").text(function(index, oldText) 
+					{
+						return "Existing text content: " + oldText + "; " + "New Text Content: Dynamically set text for " + "Element at Index " + index + "."
+					});
+			
+				$("#testhtml").html(function(index, oldHtml) {
+						return "Current Html Content is: " + oldHtml + ". " + "New Html Content is: <B>Dynamically set Html Content</B> for element at Index " + index + "."
+					});
+			});
+
+		</SCRIPT>
+	</BODY>
+</HTML>

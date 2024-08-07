@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Getting and setting css classes</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="my_style.css">
+	</head>
+
+	<body>
+		<!--
+			it's equally easy to manipulate the CSS of elements.
+			jquery makes it easy to change the style attr using the css method,
+			and classes of an element, using different methods.
+		
+			The class attr takes one or several class names.
+			which may, or may not refer to a css class defined in your stylesheet.
+			usually it does.
+			you may add class names to elements so you can easily reach them from jquery
+			This is because jquery provides support for reaching elements based on their class name.
+
+			CLASS RELATED METHODS:
+			hasClass() -> checks if one or several elements already has a specific class defined,
+			addClass(), which simply adds a class name to one or several elements.
+			removeClass().
+		
+		<a href="javascript:void(0);" onclick="ToggleClass(this);">Toggle class</a>
+		-->
+		<a href="javascript:void(0);" onclick="($this).toggleClass('bold');">Toggle</a>
+
+		<div id="divTestArea1">
+			<span>Test 1</span><br />
+			<div>Test 2</div>
+			<b>Test 3</b><br />
+		</div>
+		<script type="text/javascript">
+			/*
+			 * When the link is clicked, we send the link itself (this)
+		         * as a parameter to the ToggleClass() method that we have defined.
+		         * In it, we check if the sender already has the "bold" class.
+		         * if it has, we remove it, otherwise we add it.
+		         * This is a pretty common thing to do,
+		         * so obviously the jQuery people didn't want us to write an entire three lines of code to it.
+		         * That's why they implemented the toggleClass() method,
+		         * with which we can turn our entire example here into a single line of code:
+				check anchor element above.
+			function ToggleClass(sender) {
+				if($(sender).hasClass("bold")) {
+					$(sender).removeClass("bold")
+							}
+				else
+					$(sender).addClass("bold)"
+			}
+		        */
+
+			//we can select multiple elements, where we can add or remove multiple classes as well
+
+			$(function() {
+				$("#divTestArea1 span, #divTestArea1 b").addClass("bold");
+				$("#divTestArea1 div").addClass("bold blue");
+			});
+
+
+
+		</script>
+	<body>
+</html>

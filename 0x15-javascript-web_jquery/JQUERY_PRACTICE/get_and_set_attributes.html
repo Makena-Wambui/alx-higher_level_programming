@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Getting and setting attributes using attr() method</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+
+	<body>
+		<!--
+			Changing one or more attributes of an element is easy.
+			Use the attr()
+			Takes one parameter in its simplest form.
+				the name of the attribute we wish to get or change.
+		-->
+		<a href="http://www.google.com" id="aGoogle1">Google link</a><br />
+		<a href="http://www.google.com" id="aGoogle2">Google link</a><br />
+		<a href="http://www.google.com" id="aGoogle3">Google link</a><br />
+
+		<a href="http://www.google.com/" class="google">Google.com</a><br />
+		<a href="http://www.google.co.uk/" class="google">Google UK</a><br />
+		<a href="http://www.google.de/" class="google">Google DE</a><br />
+
+		<script type="text/javascript">
+			$(function()
+			{
+					// we get the value of the "href" attribute of our link
+					// and then show it to the user
+					alert($("#aGoogle1").attr("href"));
+			});
+
+			$(function()
+			{
+				// This will change the link to point to the British version of Google.
+				$("#aGoogle2").attr("href", "http://www.google.co.uk");
+			});
+
+			/*
+		         * attr() method can also take a map of name/value pairs,
+		         * for setting multiple attributes at the same time.
+		         * Here we set both the href and the title attributes simultaneously
+		         */
+			$(function()
+			{
+				$("#aGoogle3").attr(
+						{
+						"href": "http://www.google.co.uk",
+						"title": "Google.co.uk"
+						});
+			});
+
+			/*
+		         * attr() also supports the special overload.
+		         * By receiving a callback function as a parameter.
+		         * This function allows you to access the index of the elements selected,
+		         * and the existing attribute value.
+		         */
+			$(function()
+			{
+				$("a.google").attr("href", function(index, oldValue) {
+							console.log(`Index of the current element: ${index}. href old value is: ${oldValue}.`);
+							return oldValue + "imghp?tab=wi"});
+			});
+		</script>
+	</body>
+</html>
